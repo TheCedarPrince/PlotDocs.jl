@@ -1238,16 +1238,16 @@
 <p><a id='PlotDocs-1'></a></p>
 <h3 id="plotdocs">PlotDocs</h3>
 <p>PlotDocs is the home of this documentation.  The documentation is built using the "material" theme in "mkdocs".  For those contributing documentation (to the <code>docs</code> directory of PlotDocs), it must be subsequently built and deployed using the following instructions:</p>
-<div class="codehilite"><pre><span></span># Note: the site is built inside the PlotDocs.jl repo, but then deployed to the JuliaPlots organization page
+<div class="codehilite"><pre><span></span># <span class="nv">Note</span>: <span class="nv">the</span> <span class="nv">site</span> <span class="nv">is</span> <span class="nv">built</span> <span class="nv">inside</span> <span class="nv">the</span> <span class="nv">PlotDocs</span>.<span class="nv">jl</span> <span class="nv">repo</span>, <span class="nv">but</span> <span class="k">then</span> <span class="nv">deployed</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">JuliaPlots</span> <span class="nv">organization</span> <span class="nv">page</span>
 
-# To build, run from inside the PlotDocs directory:
-#     mkdocs build --clean
-# (optional) Make the githubio remote point to JuliaPlots/juliaplots.github.io:
-#     git remote add githubio git@github.com:JuliaPlots/juliaplots.github.io.git
-# Add files, commit, then push:
-#     git push origin master
-# Push just the site directory to the master branch of githubio
-#     git subtree push --prefix site githubio master
+# <span class="nv">To</span> <span class="nv">build</span>, <span class="nv">run</span> <span class="nv">from</span> <span class="nv">inside</span> <span class="nv">the</span> <span class="nv">PlotDocs</span> <span class="nv">directory</span>:
+#     <span class="nv">mkdocs</span> <span class="nv">build</span> <span class="o">--</span><span class="nv">clean</span>
+# <span class="ss">(</span><span class="nv">optional</span><span class="ss">)</span> <span class="nv">Make</span> <span class="nv">the</span> <span class="nv">githubio</span> <span class="nv">remote</span> <span class="nv">point</span> <span class="nv">to</span> <span class="nv">JuliaPlots</span><span class="o">/</span><span class="nv">juliaplots</span>.<span class="nv">github</span>.<span class="nv">io</span>:
+#     <span class="nv">git</span> <span class="nv">remote</span> <span class="nv">add</span> <span class="nv">githubio</span> <span class="nv">git</span>@<span class="nv">github</span>.<span class="nv">com</span>:<span class="nv">JuliaPlots</span><span class="o">/</span><span class="nv">juliaplots</span>.<span class="nv">github</span>.<span class="nv">io</span>.<span class="nv">git</span>
+# <span class="nv">Add</span> <span class="nv">files</span>, <span class="nv">commit</span>, <span class="k">then</span> <span class="nv">push</span>:
+#     <span class="nv">git</span> <span class="nv">push</span> <span class="nv">origin</span> <span class="nv">master</span>
+# <span class="nv">Push</span> <span class="nv">just</span> <span class="nv">the</span> <span class="nv">site</span> <span class="nv">directory</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">master</span> <span class="nv">branch</span> <span class="nv">of</span> <span class="nv">githubio</span>
+#     <span class="nv">git</span> <span class="nv">subtree</span> <span class="nv">push</span> <span class="o">--</span><span class="nv">prefix</span> <span class="nv">site</span> <span class="nv">githubio</span> <span class="nv">master</span>
 </pre></div>
 
 
@@ -1399,8 +1399,8 @@
 <p><a id='Set-up-the-git-remote-1'></a></p>
 <h4 id="set-up-the-git-remote">Set up the git remote</h4>
 <p>Navigate to the local repo.  Note: I'm assuming that you do development in your Julia directory, and using Mac/Linux.  Adjust as needed.</p>
-<div class="codehilite"><pre><span></span>cd ~/.julia/v0.5/Plots
-git remote add forked git@github.com:user123/Plots.jl.git
+<div class="codehilite"><pre><span></span><span class="n">cd</span><span class="w"> </span><span class="o">~/</span><span class="p">.</span><span class="n">julia</span><span class="o">/</span><span class="n">v0</span><span class="mf">.5</span><span class="o">/</span><span class="n">Plots</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">remote</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="n">forked</span><span class="w"> </span><span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="nl">com</span><span class="p">:</span><span class="n">user123</span><span class="o">/</span><span class="n">Plots</span><span class="p">.</span><span class="n">jl</span><span class="p">.</span><span class="n">git</span><span class="w"></span>
 </pre></div>
 
 
@@ -1408,11 +1408,11 @@ git remote add forked git@github.com:user123/Plots.jl.git
 <p><a id='Create-a-new-branch-1'></a></p>
 <h4 id="create-a-new-branch">Create a new branch</h4>
 <p>If you're just starting work on a new feature:</p>
-<div class="codehilite"><pre><span></span>git fetch origin
-git checkout master
-git merge --ff-only origin/master
-git checkout -b user123-myfeature
-git push -u forked user123-myfeature
+<div class="codehilite"><pre><span></span><span class="n">git</span> <span class="k">fetch</span> <span class="n">origin</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="c1">--ff-only origin/master</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">user123</span><span class="o">-</span><span class="n">myfeature</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">forked</span> <span class="n">user123</span><span class="o">-</span><span class="n">myfeature</span>
 </pre></div>
 
 
@@ -1420,10 +1420,10 @@ git push -u forked user123-myfeature
 <p><a id='or...-Reuse-an-old-branch-1'></a></p>
 <h4 id="or-reuse-an-old-branch">or... Reuse an old branch</h4>
 <p>If you have an ongoing development branch (say, <code>user123-dev</code>) which you'd prefer to use (and which has previously been merged into master!) then you can get that up to date with:</p>
-<div class="codehilite"><pre><span></span>git fetch origin
-git checkout user123-dev
-git merge --ff-only origin/master
-git push forked user123-dev
+<div class="codehilite"><pre><span></span><span class="n">git</span> <span class="k">fetch</span> <span class="n">origin</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">user123</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="c1">--ff-only origin/master</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">forked</span> <span class="n">user123</span><span class="o">-</span><span class="n">dev</span>
 </pre></div>
 
 
@@ -1431,9 +1431,9 @@ git push forked user123-dev
 <p><a id='Write-code-and-commit-1'></a></p>
 <h4 id="write-code-and-commit">Write code and commit</h4>
 <p>After powering up your favorite editor (maybe <a href="http://junolab.org/">Juno</a>?) and making some code changes to the repo, you'll want to "commit" or save a snapshot of all the changes you made.  After committing, you can "push" those changes to your forked repo on Github:</p>
-<div class="codehilite"><pre><span></span>git add src/my_new_file.jl
-git commit -am &quot;my commit message&quot;
-git push forked user123-dev
+<div class="codehilite"><pre><span></span><span class="n">git</span> <span class="k">add</span> <span class="n">src</span><span class="o">/</span><span class="n">my_new_file</span><span class="p">.</span><span class="n">jl</span>
+<span class="n">git</span> <span class="k">commit</span> <span class="o">-</span><span class="n">am</span> <span class="ss">&quot;my commit message&quot;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">forked</span> <span class="n">user123</span><span class="o">-</span><span class="n">dev</span>
 </pre></div>
 
 
@@ -1445,10 +1445,10 @@ git push forked user123-dev
 <p><a id='Cleanup-1'></a></p>
 <h4 id="cleanup">Cleanup</h4>
 <p>After all of this, you will likely want to go back to using <code>master</code> (or possibly using a tagged release, once your feature is tagged).  To clean up:</p>
-<div class="codehilite"><pre><span></span>git fetch origin
-git checkout master
-git merge --ff-only origin/master
-git branch -d user123-dev
+<div class="codehilite"><pre><span></span><span class="n">git</span> <span class="k">fetch</span> <span class="n">origin</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="c1">--ff-only origin/master</span>
+<span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="n">user123</span><span class="o">-</span><span class="n">dev</span>
 </pre></div>
 
 
@@ -1467,10 +1467,10 @@ git branch -d user123-dev
 <p>Testing in Plots is done with the help of <a href="https://github.com/JuliaPlots/VisualRegressionTests.jl">VisualRegressionTests</a>.  Reference images are stored in <a href="https://github.com/JuliaPlots/PlotReferenceImages.jl">PlotReferenceImages</a>. Sometimes the reference images need to be updated (if features change, or if the underlying backend changes).  VisualRegressionTests makes it somewhat painless to update the reference images:</p>
 <p>From the Julia REPL, run <code>include(Pkg.dir("Plots","test","runtests.jl"))</code>.  This will try to plot the tests, and then compare the results to the stored reference images.  If the test output is sufficiently different than the reference output (using Tim Holy's excellent algorithm for the comparison), then a GTK window will pop up with a side-by-side comparison.  You can choose to replace the reference image, or not, depending on whether a real error was discovered.</p>
 <p>After the reference images have been updated, navigate to PlotReferenceImages and push the changes to Github:</p>
-<div class="codehilite"><pre><span></span>cd ~/.julia/v0.5/PlotReferenceImages
-git add Plots/*
-git commit -am &quot;a useful message&quot;
-git push
+<div class="codehilite"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="p">.</span><span class="n">julia</span><span class="o">/</span><span class="n">v0</span><span class="p">.</span><span class="mi">5</span><span class="o">/</span><span class="n">PlotReferenceImages</span>
+<span class="n">git</span> <span class="k">add</span> <span class="n">Plots</span><span class="cm">/*</span>
+<span class="cm">git commit -am &quot;a useful message&quot;</span>
+<span class="cm">git push</span>
 </pre></div>
 
 

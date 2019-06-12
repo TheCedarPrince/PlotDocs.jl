@@ -819,16 +819,16 @@
 <p>Write plot + data to a <em>single</em> <code>HDF5</code> file using a human-readable structure that can easily be reverse-engineered.</p>
 <p><img alt="" src="../examples/img/hdf5_samplestruct.png" /></p>
 <p><strong>Write to .hdf5 file</strong></p>
-<div class="codehilite"><pre><span></span>hdf5() #Select HDF5-Plots &quot;backend&quot;
-p = plot(...) #Construct plot as usual
-Plots.hdf5plot_write(p, &quot;plotsave.hdf5&quot;)
+<div class="codehilite"><pre><span></span><span class="n">hdf5</span><span class="p">()</span> <span class="o">#</span><span class="k">Select</span> <span class="n">HDF5</span><span class="o">-</span><span class="n">Plots</span> <span class="ss">&quot;backend&quot;</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(...)</span> <span class="o">#</span><span class="n">Construct</span> <span class="n">plot</span> <span class="k">as</span> <span class="n">usual</span>
+<span class="n">Plots</span><span class="p">.</span><span class="n">hdf5plot_write</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="ss">&quot;plotsave.hdf5&quot;</span><span class="p">)</span>
 </pre></div>
 
 
 <p><strong>Read from .hdf5 file</strong></p>
-<div class="codehilite"><pre><span></span>pyplot() #Must first select some backend
-pread = Plots.hdf5plot_read(&quot;plotsave.hdf5&quot;)
-display(pread)
+<div class="codehilite"><pre><span></span><span class="n">pyplot</span><span class="p">()</span> <span class="o">#</span><span class="n">Must</span> <span class="k">first</span> <span class="k">select</span> <span class="k">some</span> <span class="n">backend</span>
+<span class="n">pread</span> <span class="o">=</span> <span class="n">Plots</span><span class="p">.</span><span class="n">hdf5plot_read</span><span class="p">(</span><span class="ss">&quot;plotsave.hdf5&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">pread</span><span class="p">)</span>
 </pre></div>
 
 

@@ -826,7 +826,7 @@
 <p>Plots will rarely ask you to pre-process your own inputs.  You have a Julia array? Great.  DataFrame? No problem.  Surface function? You got it.</p>
 <p>During this step, Plots will translate your input data (within the context of the plot type and other inputs) into a list of sliced and/or expanded representations, where each item represents the data for one plot series.  Under the hood, it makes heavy use of <a href="http://docs.julialang.org/en/release-0.4/manual/methods/">multiple dispatch</a> and <a href="../recipes/#recipes-1">recipes</a>.</p>
 <p>Inputs are recursively processed until a matching recipe is found.  This means you can make modular and hierarchical recipes which are processed just like anything built into Plots.</p>
-<div class="codehilite"><pre><span></span><span class="n">mutable</span> <span class="n">struct</span> <span class="n">MyVecWrapper</span>
+<div class="codehilite"><pre><span></span><span class="k">mutable</span> <span class="k">struct</span> <span class="n">MyVecWrapper</span>
   <span class="n">v</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">Float64</span><span class="p">}</span>
 <span class="k">end</span>
 <span class="n">mv</span> <span class="o">=</span> <span class="n">MyVecWrapper</span><span class="p">(</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>

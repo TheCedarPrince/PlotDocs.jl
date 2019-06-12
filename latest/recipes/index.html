@@ -892,7 +892,7 @@
 <p><a id='Type-Recipes:-Easy-drop-in-replacement-of-data-types-1'></a></p>
 <h3 id="type-recipes-easy-drop-in-replacement-of-data-types">Type Recipes: Easy drop-in replacement of data types</h3>
 <p>Many times a data type is a simple wrapper of a Function or Array.  For example:</p>
-<div class="codehilite"><pre><span></span><span class="n">mutable</span> <span class="n">struct</span> <span class="n">MyVec</span>
+<div class="codehilite"><pre><span></span><span class="k">mutable</span> <span class="k">struct</span> <span class="n">MyVec</span>
     <span class="n">v</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">Int</span><span class="p">}</span>
 <span class="k">end</span>
 </pre></div>
@@ -966,7 +966,7 @@
 <p><a id='Recipe-Syntax/Rules-1'></a></p>
 <h2 id="recipe-syntaxrules">Recipe Syntax/Rules</h2>
 <p>Lets decompose what's happening inside the recipe macro, starting with a simple recipe:</p>
-<div class="codehilite"><pre><span></span><span class="n">mutable</span> <span class="n">struct</span> <span class="n">MyType</span> <span class="k">end</span>
+<div class="codehilite"><pre><span></span><span class="k">mutable</span> <span class="k">struct</span> <span class="n">MyType</span> <span class="k">end</span>
 
 <span class="nd">@recipe</span> <span class="k">function</span> <span class="n">f</span><span class="p">(</span><span class="o">::</span><span class="n">MyType</span><span class="p">,</span> <span class="n">n</span><span class="o">::</span><span class="kt">Integer</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">add_marker</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span>
     <span class="n">linecolor</span>   <span class="o">--&gt;</span> <span class="o">:</span><span class="n">blue</span>
@@ -1049,7 +1049,7 @@
 <p><a id='Type-Recipes-1'></a></p>
 <h3 id="type-recipes_1">Type Recipes</h3>
 <p>For some custom data types, they are essentially light wrappers around built-in containers.  For example you may have a type:</p>
-<div class="codehilite"><pre><span></span><span class="n">mutable</span> <span class="n">struct</span> <span class="n">MyWrapper</span>
+<div class="codehilite"><pre><span></span><span class="k">mutable</span> <span class="k">struct</span> <span class="n">MyWrapper</span>
     <span class="n">v</span><span class="o">::</span><span class="kt">Vector</span>
 <span class="k">end</span>
 </pre></div>
@@ -1179,11 +1179,11 @@
 
 
 <p>Next we build the subplot layout and define some attributes.  A few things to note:</p>
-<div class="codehilite"><pre><span></span>- The layout creates three subplots (`_` is left blank)
-- Attributes are mapped to each subplot when passed in as a matrix (row-vector)
-- The attribute `link := :both` means that the y-axes of each row (and x-axes of
-    each column) will share data extrema.  Other values include `:x`, `:y`,
-    `:all`, and `:none`.
+<div class="codehilite"><pre><span></span><span class="o">-</span> <span class="nv">The</span> <span class="nv">layout</span> <span class="nv">creates</span> <span class="nv">three</span> <span class="nv">subplots</span> <span class="ss">(</span>`<span class="nv">_</span>` <span class="nv">is</span> <span class="nv">left</span> <span class="nv">blank</span><span class="ss">)</span>
+<span class="o">-</span> <span class="nv">Attributes</span> <span class="nv">are</span> <span class="nv">mapped</span> <span class="nv">to</span> <span class="nv">each</span> <span class="nv">subplot</span> <span class="nv">when</span> <span class="nv">passed</span> <span class="nv">in</span> <span class="nv">as</span> <span class="nv">a</span> <span class="nv">matrix</span> <span class="ss">(</span><span class="nv">row</span><span class="o">-</span><span class="nv">vector</span><span class="ss">)</span>
+<span class="o">-</span> <span class="nv">The</span> <span class="nv">attribute</span> `<span class="nv">link</span> :<span class="o">=</span> :<span class="nv">both</span>` <span class="nv">means</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">y</span><span class="o">-</span><span class="nv">axes</span> <span class="nv">of</span> <span class="nv">each</span> <span class="nv">row</span> <span class="ss">(</span><span class="nv">and</span> <span class="nv">x</span><span class="o">-</span><span class="nv">axes</span> <span class="nv">of</span>
+    <span class="nv">each</span> <span class="nv">column</span><span class="ss">)</span> <span class="nv">will</span> <span class="nv">share</span> <span class="nv">data</span> <span class="nv">extrema</span>.  <span class="nv">Other</span> <span class="nv">values</span> <span class="k">include</span> `:<span class="nv">x</span>`, `:<span class="nv">y</span>`,
+    `:<span class="nv">all</span>`, <span class="nv">and</span> `:<span class="nv">none</span>`.
 </pre></div>
 
 
@@ -1275,13 +1275,13 @@
 <p>This error occurs when the input types could not be handled by a recipe. The type <code>&lt;&lt;some type&gt;&gt;</code> cannot be processed.  Remember, there may be recursive calls to multiple recipes for a complicated plot.</p>
 <p><a id='MethodError:-start-has-no-method-matching-start(::Void)-1'></a></p>
 <h4 id="methoderror-start-has-no-method-matching-startvoid">MethodError: <code>start</code> has no method matching start(::Void)</h4>
-<div class="codehilite"><pre><span></span><span class="n">ERROR</span><span class="o">:</span> <span class="n">MethodError</span><span class="o">:</span> <span class="err">`</span><span class="n">start</span><span class="err">`</span> <span class="n">has</span> <span class="n">no</span> <span class="n">method</span> <span class="n">matching</span> <span class="n">start</span><span class="o">(::</span><span class="n">Void</span><span class="o">)</span>
-    <span class="k">in</span> <span class="n">collect</span> <span class="n">at</span> <span class="o">./</span><span class="n">array</span><span class="o">.</span><span class="na">jl</span><span class="o">:</span><span class="mi">260</span>
-    <span class="k">in</span> <span class="n">collect</span> <span class="n">at</span> <span class="o">./</span><span class="n">array</span><span class="o">.</span><span class="na">jl</span><span class="o">:</span><span class="mi">272</span>
-    <span class="k">in</span> <span class="n">plotly_series</span> <span class="n">at</span> <span class="o">~/.</span><span class="n">julia</span><span class="sr">/v0.4/Plots/src/backends/</span><span class="n">plotly</span><span class="o">.</span><span class="na">jl</span><span class="o">:</span><span class="mi">345</span>
-    <span class="k">in</span> <span class="n">_series_added</span> <span class="n">at</span> <span class="o">~/.</span><span class="n">julia</span><span class="sr">/v0.4/Plots/src/backends/</span><span class="n">plotlyjs</span><span class="o">.</span><span class="na">jl</span><span class="o">:</span><span class="mi">36</span>
-    <span class="k">in</span> <span class="n">_apply_series_recipe</span> <span class="n">at</span> <span class="o">~/.</span><span class="n">julia</span><span class="sr">/v0.4/Plots/src/</span><span class="n">plot</span><span class="o">.</span><span class="na">jl</span><span class="o">:</span><span class="mi">224</span>
-    <span class="k">in</span> <span class="n">_plot</span><span class="o">!</span> <span class="n">at</span> <span class="o">~/.</span><span class="n">julia</span><span class="sr">/v0.4/Plots/src/</span><span class="n">plot</span><span class="o">.</span><span class="na">jl</span><span class="o">:</span><span class="mi">537</span>
+<div class="codehilite"><pre><span></span><span class="n">ERROR</span><span class="p">:</span> <span class="n">MethodError</span><span class="p">:</span> <span class="ss">`start`</span> <span class="n">has</span> <span class="n">no</span> <span class="n">method</span> <span class="n">matching</span> <span class="nf">start</span><span class="p">(::</span><span class="n">Void</span><span class="p">)</span>
+    <span class="k">in</span> <span class="n">collect</span> <span class="n">at</span> <span class="p">.</span><span class="o">/</span><span class="n">array</span><span class="p">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">260</span>
+    <span class="k">in</span> <span class="n">collect</span> <span class="n">at</span> <span class="p">.</span><span class="o">/</span><span class="n">array</span><span class="p">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">272</span>
+    <span class="k">in</span> <span class="n">plotly_series</span> <span class="n">at</span> <span class="o">~/</span><span class="p">.</span><span class="n">julia</span><span class="o">/</span><span class="n">v0</span><span class="p">.</span><span class="mi">4</span><span class="o">/</span><span class="n">Plots</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">backends</span><span class="o">/</span><span class="n">plotly</span><span class="p">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">345</span>
+    <span class="k">in</span> <span class="n">_series_added</span> <span class="n">at</span> <span class="o">~/</span><span class="p">.</span><span class="n">julia</span><span class="o">/</span><span class="n">v0</span><span class="p">.</span><span class="mi">4</span><span class="o">/</span><span class="n">Plots</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">backends</span><span class="o">/</span><span class="n">plotlyjs</span><span class="p">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">36</span>
+    <span class="k">in</span> <span class="n">_apply_series_recipe</span> <span class="n">at</span> <span class="o">~/</span><span class="p">.</span><span class="n">julia</span><span class="o">/</span><span class="n">v0</span><span class="p">.</span><span class="mi">4</span><span class="o">/</span><span class="n">Plots</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">plot</span><span class="p">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">224</span>
+    <span class="k">in</span> <span class="n">_plot</span><span class="o">!</span> <span class="n">at</span> <span class="o">~/</span><span class="p">.</span><span class="n">julia</span><span class="o">/</span><span class="n">v0</span><span class="p">.</span><span class="mi">4</span><span class="o">/</span><span class="n">Plots</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">plot</span><span class="p">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">537</span>
 </pre></div>
 
 
