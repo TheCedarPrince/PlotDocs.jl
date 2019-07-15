@@ -700,10 +700,11 @@
                 <p><a id='Install-1'></a></p>
 <h3 id="install">Install</h3>
 <p>First, add the package</p>
-<div class="codehilite"><pre><span></span><span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;Plots&quot;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="k">import</span> <span class="n">Pkg</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;Plots&quot;</span><span class="p">)</span>
 
 <span class="c"># if you want the latest features:</span>
-<span class="n">Pkg</span><span class="o">.</span><span class="n">checkout</span><span class="p">(</span><span class="s">&quot;Plots&quot;</span><span class="p">)</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">pkg</span><span class="s">&quot;add Plots#master&quot;</span>
 </pre></div>
 
 
