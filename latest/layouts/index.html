@@ -752,7 +752,7 @@
 <hr />
 <p><a id='Advanced-Layouts-1'></a></p>
 <h4 id="advanced-layouts">Advanced Layouts</h4>
-<p>The <code>@layout</code> macro is the easiest way to define complex layouts, using Julia's <a href="https://docs.julialang.org/en/stable/manual/arrays/#Concatenation-1">multidimensional Array construction</a> as the basis for a custom layout syntax.  Precise sizing can be achieved with curly brackets, otherwise the free space is equally split between the <strong>plot areas</strong> of subplots.</p>
+<p>The <code>@layout</code> macro is the easiest way to define complex layouts, using Julia's <a href="https://docs.julialang.org/en/latest/manual/arrays/#Concatenation-1">multidimensional Array construction</a> as the basis for a custom layout syntax.  Precise sizing can be achieved with curly brackets, otherwise the free space is equally split between the <strong>plot areas</strong> of subplots.</p>
 <div class="codehilite"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="nd">@layout</span> <span class="p">[</span>  <span class="n">a</span><span class="p">{</span><span class="mf">0.3</span><span class="n">w</span><span class="p">}</span> <span class="p">[</span><span class="n">grid</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
                          <span class="n">b</span><span class="p">{</span><span class="mf">0.2</span><span class="n">h</span><span class="p">}</span> <span class="p">]]</span>
 <span class="n">plot</span><span class="p">(</span>
