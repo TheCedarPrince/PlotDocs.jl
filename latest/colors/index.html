@@ -862,6 +862,10 @@
 <li><strong>markerstrokecolor</strong>: Color of the border/stroke of markers and shapes</li>
 </ul>
 <p><code>seriescolor</code> defaults to <code>:auto</code>, and gets assigned a color from the <code>color_palette</code> based on its index in the subplot.  By default, the other colors <code>:match</code>.  (See the table below)</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In general, color gradients can be set by <code>*color</code>, and the corresponding color values to look up in the gradients by <code>*_z</code>.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -888,8 +892,14 @@
 </tr>
 </tbody>
 </table>
-<p>Note: each of these attributes have a corresponding alpha override: <code>seriesalpha</code>, <code>linealpha</code>, <code>fillalpha</code>, <code>markeralpha</code>, and <code>markerstrokealpha</code>.  They are optional, and you can still give alpha information as part of an <code>Colors.RGBA</code>.</p>
-<p>Note: in some contexts, and when the user hasn't set a value, the <code>linecolor</code> or <code>markerstrokecolor</code> may be overridden.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>each of these attributes have a corresponding alpha override: <code>seriesalpha</code>, <code>linealpha</code>, <code>fillalpha</code>, <code>markeralpha</code>, and <code>markerstrokealpha</code>.  They are optional, and you can still give alpha information as part of an <code>Colors.RGBA</code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In some contexts, and when the user hasn't set a value, the <code>linecolor</code> or <code>markerstrokecolor</code> may be overridden.</p>
+</div>
 <hr />
 <p><a id='Foreground/Background-1'></a></p>
 <h4 id="foregroundbackground">Foreground/Background</h4>
