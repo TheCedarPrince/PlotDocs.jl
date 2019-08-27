@@ -1,0 +1,1153 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Thomas Breloff">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+    
+    
+      
+        <title>Tutorial - Plots</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#tutorial" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Plots" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Plots
+              </span>
+              <span class="md-header-nav__topic">
+                Tutorial
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/JuliaPlots/Plots.jl/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Plots" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Plots
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/JuliaPlots/Plots.jl/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basics/" title="Basics" class="md-nav__link">
+      Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tutorial
+      </label>
+    
+    <a href="./" title="Tutorial" class="md-nav__link md-nav__link--active">
+      Tutorial
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-plotting-line-plots" title="Basic Plotting: Line Plots" class="md-nav__link">
+    Basic Plotting: Line Plots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plot-attributes" title="Plot Attributes" class="md-nav__link">
+    Plot Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plotting-backends" title="Plotting Backends" class="md-nav__link">
+    Plotting Backends
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-the-plotting-series" title="Changing the Plotting Series" class="md-nav__link">
+    Changing the Plotting Series
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plotting-in-scripts" title="Plotting in Scripts" class="md-nav__link">
+    Plotting in Scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-multiple-plots-as-subplots" title="Combining Multiple Plots as Subplots" class="md-nav__link">
+    Combining Multiple Plots as Subplots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plot-recipes-and-recipe-libraries" title="Plot Recipes and Recipe Libraries" class="md-nav__link">
+    Plot Recipes and Recipe Libraries
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-user-recipes" title="Using User Recipes" class="md-nav__link">
+    Using User Recipes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-type-recipe" title="Using a Type Recipe" class="md-nav__link">
+    Using a Type Recipe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-plot-recipes" title="Using Plot Recipes" class="md-nav__link">
+    Using Plot Recipes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-series-recipes" title="Using Series Recipes" class="md-nav__link">
+    Using Series Recipes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-addons-to-try" title="Additional Addons To Try" class="md-nav__link">
+    Additional Addons To Try
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Manual
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Manual
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../input_data/" title="Input Data" class="md-nav__link">
+      Input Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../output/" title="Output" class="md-nav__link">
+      Output
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../attributes/" title="Attributes" class="md-nav__link">
+      Attributes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../layouts/" title="Layouts" class="md-nav__link">
+      Layouts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../recipes/" title="Recipes" class="md-nav__link">
+      Recipes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../colors/" title="Colors" class="md-nav__link">
+      Colors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../animations/" title="Animations" class="md-nav__link">
+      Animations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backends/" title="Backends" class="md-nav__link">
+      Backends
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../supported/" title="Supported Attributes" class="md-nav__link">
+      Supported Attributes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../learning/" title="Learning" class="md-nav__link">
+      Learning
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ecosystem/" title="Ecosystem" class="md-nav__link">
+      Ecosystem
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Advanced Topics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Advanced Topics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipeline/" title="Internals" class="md-nav__link">
+      Internals
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Examples
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Examples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../examples/gr/" title="GR" class="md-nav__link">
+      GR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../examples/pyplot/" title="PyPlot" class="md-nav__link">
+      PyPlot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../examples/plotlyjs/" title="PlotlyJS" class="md-nav__link">
+      PlotlyJS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../examples/pgfplots/" title="PGFPlots" class="md-nav__link">
+      PGFPlots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../examples/unicodeplots/" title="UnicodePlots" class="md-nav__link">
+      UnicodePlots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../examples/inspectdr/" title="InspectDR" class="md-nav__link">
+      InspectDR
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-plotting-line-plots" title="Basic Plotting: Line Plots" class="md-nav__link">
+    Basic Plotting: Line Plots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plot-attributes" title="Plot Attributes" class="md-nav__link">
+    Plot Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plotting-backends" title="Plotting Backends" class="md-nav__link">
+    Plotting Backends
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-the-plotting-series" title="Changing the Plotting Series" class="md-nav__link">
+    Changing the Plotting Series
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plotting-in-scripts" title="Plotting in Scripts" class="md-nav__link">
+    Plotting in Scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-multiple-plots-as-subplots" title="Combining Multiple Plots as Subplots" class="md-nav__link">
+    Combining Multiple Plots as Subplots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plot-recipes-and-recipe-libraries" title="Plot Recipes and Recipe Libraries" class="md-nav__link">
+    Plot Recipes and Recipe Libraries
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-user-recipes" title="Using User Recipes" class="md-nav__link">
+    Using User Recipes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-type-recipe" title="Using a Type Recipe" class="md-nav__link">
+    Using a Type Recipe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-plot-recipes" title="Using Plot Recipes" class="md-nav__link">
+    Using Plot Recipes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-series-recipes" title="Using Series Recipes" class="md-nav__link">
+    Using Series Recipes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-addons-to-try" title="Additional Addons To Try" class="md-nav__link">
+    Additional Addons To Try
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/JuliaPlots/PlotDocs.jl/blob/master/docs/src/tutorial.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <p><a id='tutorial-1'></a></p>
+<h1 id="tutorial">Tutorial</h1>
+<p>This is a guide for getting you up and running with Plots.jl. Its main goal is to introduce you to the terminology used in the package, how to use Plots.jl in common use cases, and put you in a position to easily understand the rest of the manual.</p>
+<p><a id='Basic-Plotting:-Line-Plots-1'></a></p>
+<h2 id="basic-plotting-line-plots">Basic Plotting: Line Plots</h2>
+<p>The most basic plots are line plots. Assuming you have installed Plots.jl via <code>Pkg.add("Plots")</code>, you can plot a line by calling <code>plot</code> on two vectors of numbers. For example:</p>
+<div class="codehilite"><pre><span></span><span class="k">using</span> <span class="n">Plots</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="c"># These are the plotting data</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="first_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/lines_1.png" /></p>
+<p>The plot is displayed in a plot pane, a stand-alone window or the browser, depending on the environment and backend (see <a href="./#plotting-backends-1">below</a>).</p>
+<p>In Plots.jl, every column is a <strong>series</strong>, i.e. a set of related points which form lines, surfaces, or other plotting primitives. Thus we can plot multiple lines by plotting a matrix of values and each column is interpreted as a separate line:</p>
+<div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c"># 2 columns means two lines</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="twoseries_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/lines_2.png" /></p>
+<p>Additionally, we can add more lines by mutating the plot object. This is done by the <code>plot!</code> command. Let's add another line to our current plot:</p>
+<div class="codehilite"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="addline_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/lines_3.png" /></p>
+<p>Note that we could have done the same as above using an explicit plot variable:</p>
+<div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c"># 2 columns means two lines</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="explicit_p_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/lines_4.png" /></p>
+<p>Note that in the case where <code>p</code> is omitted, Plots.jl uses the global <code>Plots.CURRENT_PLOT</code> automatically in the same manner.</p>
+<p><a id='Plot-Attributes-1'></a></p>
+<h2 id="plot-attributes">Plot Attributes</h2>
+<p>In the previous section we made plots... we're done right? No! We need to style our plots. In Plots.jl, the modifiers to plots are called <strong>attributes</strong>. These are documented at the <a href="../attributes/#attributes-1">attributes page</a>. Plots.jl follows a simple rule with data vs attributes: positional arguments are input data, and keyword arguments are attributes. Thus something like <code>plot(x,y,z)</code> is 3-dimensional data for 3D plots, while <code>plot(x,y,attribute=value)</code> is 2-dimensional with an attribute.</p>
+<p>As an example, we see that from the attributes page that we can increase the line width using <code>line_width</code> (or its alias <code>lw</code>), change the legend's labels using the <code>label</code> command, and add a title with <code>title</code>. Let's apply that to our previous plot:</p>
+<div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c"># 2 columns means two lines</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Two Lines&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;Line 1&quot;</span> <span class="s">&quot;Line 2&quot;</span><span class="p">],</span><span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="first_attributes_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/attr_1.png" /></p>
+<p>Note that every attribute can also be applied by mutating the plot with a modifier function. For example, the <code>xlabel</code> attribute adds a label for the x-axis. We can in the plot command specify it via <code>xlabel=...</code> like we did above. Or we can use the modifier function to add it after the plot has already been generated:</p>
+<div class="codehilite"><pre><span></span><span class="n">xlabel!</span><span class="p">(</span><span class="s">&quot;My x label&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="add_x_label_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/attr_2.png" /></p>
+<p>Every modifier function is the name of the attribute followed by <code>!</code>. Note that this implicitly uses the global <code>Plots.CURRENT_PLOT</code> and we can apply it to other plot objects via <code>attribute!(p,value)</code>. For more examples of attributes in action, see the examples pages.</p>
+<p><a id='plotting-backends-1'></a></p>
+<h2 id="plotting-backends">Plotting Backends</h2>
+<p>Here's a secret: Plots.jl isn't actually a plotting package! Plots.jl is a plotting metapackage: it's an interface over many different plotting libraries. Thus what Plots.jl is actually doing is interpreting your commands and then generating the plots using another plotting library. This plotting library in the background is referred to as the <strong>backend</strong>. The nice thing about this is that this means you can use many different plotting libraries all with the Plots.jl syntax, and we'll see in a little bit that Plots.jl adds new features to each of these libraries!</p>
+<p>When we started plotting above, our plot used the default backend. The default backend depends on what plotting packages you've installed in Julia. If have not previously installed any backend packages, this will plot to the browser using Plotly, or into the REPL using UnicodePlots.jl. However, let's say we want a standard plotting backend which will plot into a nice GUI or into the plot pane of Juno. To do this, we'll need a backend which is compatible with these features. Some common backends for this are PyPlot and GR. To install these backends, simply use the standard Julia installation (<code>Pkg.add("BackendPackage")</code>). We can specifically choose the backend we are plotting into by using the name of the backend in all lower case as a function. Let's plot the example from above using Plotly and then GR (this assumes you've done <code>Pkg.add("GR")</code>!):</p>
+<div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c"># 2 columns means two lines</span>
+<span class="n">plotly</span><span class="p">()</span> <span class="c"># Set the backend to Plotly</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;This is Plotted using Plotly&quot;</span><span class="p">)</span> <span class="c"># This plots into the web browser via Plotly</span>
+<span class="n">gr</span><span class="p">()</span> <span class="c"># Set the backend to GR</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;This is Plotted using GR&quot;</span><span class="p">)</span> <span class="c"># This plots using GR</span>
+</pre></div>
+
+
+<p><img alt="plotly_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/backends_1.png" /></p>
+<p><img alt="gr_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/backends_2.png" /></p>
+<p>If you're in Juno, the second plot command will cause the plot to open in the plot pane. If you're in the REPL, GR will open a GUI window. You can always open a GUI anyways by using the <code>gui()</code> command.</p>
+<p>Each plotting backend has a very different feel. Some have interactivity, some are faster and can deal with huge numbers of datapoints, and some can do 3D plots. Saving plots is done by the <code>savefig</code> command. As an example:</p>
+<div class="codehilite"><pre><span></span><span class="n">savefig</span><span class="p">(</span><span class="s">&quot;myplot.png&quot;</span><span class="p">)</span> <span class="c"># Saves the CURRENT_PLOT as a .png</span>
+<span class="n">savefig</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="s">&quot;myplot.pdf&quot;</span><span class="p">)</span> <span class="c"># Saves the plot from p as a .pdf vector graphic</span>
+</pre></div>
+
+
+<p>Some like GR can save to vector graphics and PDFs, while others like Plotly only save to <code>.png</code>s. For more information on backends, see the <a href="../backends/#backends-1">backends page</a>. For examples of plots from the various backends, see the Examples section.</p>
+<p><a id='Changing-the-Plotting-Series-1'></a></p>
+<h2 id="changing-the-plotting-series">Changing the Plotting Series</h2>
+<p>At this point you're a master of lines, but don't you want to plot your data in other ways? In Plots.jl, these other ways of plotting a series is called a <strong>series type</strong>. A line is one series type. However, a scatter plot is another series type which is commonly used. We can change the series type by the <code>seriestype</code> attribute:</p>
+<div class="codehilite"><pre><span></span><span class="n">gr</span><span class="p">()</span> <span class="c"># We will continue onward using the GR backend</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">seriestype</span><span class="o">=:</span><span class="n">scatter</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;My Scatter Plot&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="scatter_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/scatter_1.png" /></p>
+<p>For each built-in series type, there is a shorthand function for directly calling that series type which matches the name of the series type. It handles attributes just the same as the <code>plot</code> command, and have a mutating form which ends in <code>!</code>. For example, we can instead do that scatter plot with:</p>
+<div class="codehilite"><pre><span></span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;My Scatter Plot&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="scatter_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/scatter_2.png" /></p>
+<p>The series types which are available are dependent on the backend, and are documented on the <a href="../supported/#supported-1">Supported Attributes page</a>. As we will describe later, other libraries can add new series types via <strong>recipes</strong> as well.</p>
+<p><a id='Plotting-in-Scripts-1'></a></p>
+<h2 id="plotting-in-scripts">Plotting in Scripts</h2>
+<p>Now that you're making useful plots, go ahead and add these plotting commands to a script. Now call the script... and the plot doesn't show up? This is because Julia in interactive use calls <code>display</code> on every variable that is returned by a command without a <code>;</code>. Thus in each case above, the interactive usage was automatically calling <code>display</code> on the returned plot objects.</p>
+<p>In a script, Julia does not do automatic displays (which is why <code>;</code> is not necessary). However, if we would like to display our plots in a script, this means we just need to add the <code>display</code> call. For example:</p>
+<div class="codehilite"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+
+
+<p>If we have a plot object <code>p</code>, we can do <code>display(p)</code> at any time.</p>
+<p><a id='Combining-Multiple-Plots-as-Subplots-1'></a></p>
+<h2 id="combining-multiple-plots-as-subplots">Combining Multiple Plots as Subplots</h2>
+<p>We can combine multiple plots together as subplots using <strong>layouts</strong>. There are many methods for doing this, and we will show two simple methods for generating simple layouts. More advanced layouts are shown in the <a href="../layouts/#layouts-1">Layouts page</a>.</p>
+<p>The first method is to define a layout which will split a series. The <code>layout</code> command takes in a 2-tuple <code>layout=(N,M)</code> which builds an NxM grid of plots. It will automatically split a series to be in each plot. For example, if we do <code>layout=(4,1)</code> on a plot with four series, then we will get four rows of plots, each with one series in it:</p>
+<div class="codehilite"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">layout</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+
+
+<p><img alt="subplot_single_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/subplots_1.png" /></p>
+<p>We can also use layouts on plots of plot objects. For example, we can generate for separate plots and make a single plot that combines them in a 2x2 grid via the following:</p>
+<div class="codehilite"><pre><span></span><span class="n">p1</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="c"># Make a line plot</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="c"># Make a scatter plot</span>
+<span class="n">p3</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">xlabel</span><span class="o">=</span><span class="s">&quot;This one is labelled&quot;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Subtitle&quot;</span><span class="p">)</span>
+<span class="n">p4</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="c"># Four histograms each with 10 points? Why not!</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span><span class="n">p2</span><span class="p">,</span><span class="n">p3</span><span class="p">,</span><span class="n">p4</span><span class="p">,</span><span class="n">layout</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">legend</span><span class="o">=</span><span class="kc">false</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="multi_plot_subplot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/subplots_2.png" /></p>
+<p>Notice that the attributes in the individual plots are applied to the individual plots, while the attributes on the final <code>plot</code> call are applied to all of the subplots.</p>
+<p><a id='Plot-Recipes-and-Recipe-Libraries-1'></a></p>
+<h2 id="plot-recipes-and-recipe-libraries">Plot Recipes and Recipe Libraries</h2>
+<p>You now know all of the basic terminology of Plots.jl and can roam the documentation freely to become a plotting master. However, there is one thing left: <strong>recipes</strong>. Plotting recipes are extensions to the Plots.jl framework. They add:</p>
+<ol>
+<li>New <code>plot</code> commands via <strong>user recipes</strong>.</li>
+<li>Default interpretations of Julia types as plotting data via <strong>type recipes</strong>.</li>
+<li>New functions for generating plots via <strong>plot recipes</strong>.</li>
+<li>New series types via <strong>series recipes</strong>.</li>
+</ol>
+<p>Writing your own recipes is an advanced topic described on the <a href="../recipes/#recipes-1">recipes page</a>. Instead, we will introduce the ways that one uses a recipe.</p>
+<p>Recipes are included in many recipe libraries. Two fundamental recipe libraries are <a href="https://github.com/JuliaPlots/PlotRecipes.jl">PlotRecipes.jl</a> and <a href="https://github.com/JuliaPlots/StatsPlots.jl">StatsPlots.jl</a>. Let's look into StatsPlots.jl. StatsPlots.jl adds a bunch of recipes, but the ones we'll focus on are:</p>
+<ol>
+<li>It adds a type recipe for <code>Distribution</code>s.</li>
+<li>It adds a plot recipe for marginal histograms.</li>
+<li>It adds a bunch of new statistical plot series.</li>
+</ol>
+<p>Besides recipes, StatsPlots.jl also provides a specialized macro from plotting directly from data tables.</p>
+<p><a id='Using-User-Recipes-1'></a></p>
+<h3 id="using-user-recipes">Using User Recipes</h3>
+<p>A user recipe says how to interpret plotting commands on a new data type. In this case, StatsPlots.jl thus has a macro <code>@df</code> which allows you to plot a <code>DataFrame</code> directly by using the column names. Let's build a <code>DataFrame</code> with columns <code>a</code>, <code>b</code>, and <code>c</code>, and tell Plots.jl to use <code>a</code> as the <code>x</code> axis and plot the series defined by columns <code>b</code> and <code>c</code>:</p>
+<div class="codehilite"><pre><span></span><span class="c"># Pkg.add(&quot;StatsPlots&quot;)</span>
+<span class="k">using</span> <span class="n">StatsPlots</span> <span class="c"># Required for the DataFrame user recipe</span>
+<span class="c"># Now let&#39;s create the DataFrame</span>
+<span class="k">using</span> <span class="n">DataFrames</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="c"># Plot the DataFrame by declaring the points by the column names</span>
+<span class="nd">@df</span> <span class="n">df</span> <span class="n">plot</span><span class="p">(</span><span class="o">:</span><span class="n">a</span><span class="p">,</span> <span class="p">[</span><span class="o">:</span><span class="n">b</span> <span class="o">:</span><span class="n">c</span><span class="p">])</span> <span class="c"># x = :a, y = [:b :c]. Notice this is two columns!</span>
+</pre></div>
+
+
+<p><img alt="dataframeplot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/user_recipes_1.png" /></p>
+<p>Notice there's not much you have to do here: all of the commands from before (attributes, series types, etc.) will still work on this data:</p>
+<div class="codehilite"><pre><span></span><span class="nd">@df</span> <span class="n">df</span> <span class="n">scatter</span><span class="p">(</span><span class="o">:</span><span class="n">a</span><span class="p">,</span> <span class="o">:</span><span class="n">b</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;My DataFrame Scatter Plot!&quot;</span><span class="p">)</span> <span class="c"># x = :a, y = :b</span>
+</pre></div>
+
+
+<p><img alt="dataframescatterplot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/user_recipes_2.png" /></p>
+<p><a id='Using-a-Type-Recipe-1'></a></p>
+<h3 id="using-a-type-recipe">Using a Type Recipe</h3>
+<p>In addition, StatsPlots.jl extends Distributions.jl by adding a type recipe for its distribution types, so they can be directly interpreted as plotting data:</p>
+<div class="codehilite"><pre><span></span><span class="k">using</span> <span class="n">Distributions</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">Normal</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="distributionplot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/type_recipes.png" /></p>
+<p>Thus type recipes are a very convenient way to plot a specialized type which requires no more intervention!</p>
+<p><a id='Using-Plot-Recipes-1'></a></p>
+<h3 id="using-plot-recipes">Using Plot Recipes</h3>
+<p>StatsPlots.jl adds the <code>marginhist</code> multiplot via a plot recipe. For our data we will pull in the famous <code>iris</code> dataset from RDatasets:</p>
+<div class="codehilite"><pre><span></span><span class="c">#Pkg.add(&quot;RDatasets&quot;)</span>
+<span class="k">using</span> <span class="n">RDatasets</span>
+<span class="n">iris</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">(</span><span class="s">&quot;datasets&quot;</span><span class="p">,</span><span class="s">&quot;iris&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Here <code>iris</code> is a Dataframe, using the <code>@df</code> macro on <code>Dataframe</code>s described above, we give <code>marginalhist(x,y)</code> the data from the <code>PetalLength</code> and the <code>PetalWidth</code> columns:</p>
+<div class="codehilite"><pre><span></span><span class="nd">@df</span> <span class="n">iris</span> <span class="n">marginalhist</span><span class="p">(</span><span class="o">:</span><span class="n">PetalLength</span><span class="p">,</span> <span class="o">:</span><span class="n">PetalWidth</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="marginalhistplot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/plot_recipes.png" /></p>
+<p>This demonstrates two important facts. Notice that this is more than a series since it generates multiple series (i.e. there are multiple plots due to the hists on the top and right). Thus a plot recipe is not just a series but instead something like a new <code>plot</code> command.</p>
+<p><a id='Using-Series-Recipes-1'></a></p>
+<h3 id="using-series-recipes">Using Series Recipes</h3>
+<p>StatsPlots.jl also introduces new series recipes. The key is that you don't have to do anything differently: after <code>using StatsPlots</code> you can simply use those new series recipes as though they were built into the plotting libraries. Let's use the Violin plot on some random data:</p>
+<div class="codehilite"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="c"># Four series of 100 points each</span>
+<span class="n">violin</span><span class="p">([</span><span class="s">&quot;Series 1&quot;</span> <span class="s">&quot;Series 2&quot;</span> <span class="s">&quot;Series 3&quot;</span> <span class="s">&quot;Series 4&quot;</span><span class="p">],</span><span class="n">y</span><span class="p">,</span><span class="n">leg</span><span class="o">=</span><span class="kc">false</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="violinplot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/series_recipes_1.png" /></p>
+<p>and we can add a <code>boxplot</code> on top using the same mutation commands as before:</p>
+<div class="codehilite"><pre><span></span><span class="n">boxplot!</span><span class="p">([</span><span class="s">&quot;Series 1&quot;</span> <span class="s">&quot;Series 2&quot;</span> <span class="s">&quot;Series 3&quot;</span> <span class="s">&quot;Series 4&quot;</span><span class="p">],</span><span class="n">y</span><span class="p">,</span><span class="n">leg</span><span class="o">=</span><span class="kc">false</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="violinboxplot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/series_recipes_2.png" /></p>
+<p><a id='Additional-Addons-To-Try-1'></a></p>
+<h2 id="additional-addons-to-try">Additional Addons To Try</h2>
+<p>Given the easy extendability of Plots.jl, there are many other things you can try. Here's a short list of very usable addons to check out:</p>
+<ul>
+<li><a href="https://github.com/JuliaPlots/PlotThemes.jl">PlotThemes.jl</a> allows you to change the color scheme of your plots. For example, <code>theme(:dark)</code> adds a dark theme.</li>
+<li><a href="https://github.com/JuliaPlots/GGPlots.jl">GGPlots.jl</a> adds a Grammar of Graphics (GoG) API to Plots.jl</li>
+<li>The <a href="../ecosystem/#ecosystem-1">ecosystem page</a> shows many other packages which have recipes and extend Plots.jl's functionality.</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../basics/" title="Basics" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Basics
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../input_data/" title="Input Data" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Input Data
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2015-2016 Thomas Breloff
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.30f6b8b1.js"></script>
+      
+      <script>app.initialize({version:"0.17.5",url:{base:".."}})</script>
+      
+        <script src="../mathjax-config.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

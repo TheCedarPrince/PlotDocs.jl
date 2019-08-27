@@ -1,0 +1,1091 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Thomas Breloff">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+    
+    
+      
+        <title>Colors - Plots</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#colors" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Plots" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Plots
+              </span>
+              <span class="md-header-nav__topic">
+                Colors
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/JuliaPlots/Plots.jl/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Plots" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Plots
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/JuliaPlots/Plots.jl/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basics/" title="Basics" class="md-nav__link">
+      Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorial/" title="Tutorial" class="md-nav__link">
+      Tutorial
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Manual
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Manual
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../input_data/" title="Input Data" class="md-nav__link">
+      Input Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../output/" title="Output" class="md-nav__link">
+      Output
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../attributes/" title="Attributes" class="md-nav__link">
+      Attributes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../layouts/" title="Layouts" class="md-nav__link">
+      Layouts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../recipes/" title="Recipes" class="md-nav__link">
+      Recipes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Colors
+      </label>
+    
+    <a href="./" title="Colors" class="md-nav__link md-nav__link--active">
+      Colors
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#colors" title="Colors" class="md-nav__link">
+    Colors
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#series-colors" title="Series Colors" class="md-nav__link">
+    Series Colors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foregroundbackground" title="Foreground/Background" class="md-nav__link">
+    Foreground/Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misc" title="Misc" class="md-nav__link">
+    Misc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colorschemes" title="Colorschemes" class="md-nav__link">
+    Colorschemes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plots" title="Plots" class="md-nav__link">
+    Plots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmocean" title="cmocean" class="md-nav__link">
+    cmocean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misc_1" title="misc" class="md-nav__link">
+    misc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colorcet" title="colorcet" class="md-nav__link">
+    colorcet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colorbrewer" title="colorbrewer" class="md-nav__link">
+    colorbrewer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../animations/" title="Animations" class="md-nav__link">
+      Animations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backends/" title="Backends" class="md-nav__link">
+      Backends
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../supported/" title="Supported Attributes" class="md-nav__link">
+      Supported Attributes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../learning/" title="Learning" class="md-nav__link">
+      Learning
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ecosystem/" title="Ecosystem" class="md-nav__link">
+      Ecosystem
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Advanced Topics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Advanced Topics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipeline/" title="Internals" class="md-nav__link">
+      Internals
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Examples
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Examples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../examples/gr/" title="GR" class="md-nav__link">
+      GR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../examples/pyplot/" title="PyPlot" class="md-nav__link">
+      PyPlot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../examples/plotlyjs/" title="PlotlyJS" class="md-nav__link">
+      PlotlyJS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../examples/pgfplots/" title="PGFPlots" class="md-nav__link">
+      PGFPlots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../examples/unicodeplots/" title="UnicodePlots" class="md-nav__link">
+      UnicodePlots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../examples/inspectdr/" title="InspectDR" class="md-nav__link">
+      InspectDR
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#colors" title="Colors" class="md-nav__link">
+    Colors
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#series-colors" title="Series Colors" class="md-nav__link">
+    Series Colors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foregroundbackground" title="Foreground/Background" class="md-nav__link">
+    Foreground/Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misc" title="Misc" class="md-nav__link">
+    Misc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colorschemes" title="Colorschemes" class="md-nav__link">
+    Colorschemes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plots" title="Plots" class="md-nav__link">
+    Plots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmocean" title="cmocean" class="md-nav__link">
+    cmocean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misc_1" title="misc" class="md-nav__link">
+    misc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colorcet" title="colorcet" class="md-nav__link">
+    colorcet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colorbrewer" title="colorbrewer" class="md-nav__link">
+    colorbrewer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/JuliaPlots/PlotDocs.jl/blob/master/docs/src/colors.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Colors</h1>
+                
+                <p><a id='Colors-1'></a></p>
+<h2 id="colors">Colors</h2>
+<p>There are many color attributes, for lines, fills, markers, backgrounds, and foregrounds.  Many colors follow a hierarchy... <code>linecolor</code> gets its value from <code>seriescolor</code>, for example, unless you override the value.  This allows for you to simply set precisely what you want, without lots of boilerplate.</p>
+<p>Color attributes will accept many different types:</p>
+<ul>
+<li><code>Symbol</code>s or <code>String</code>s will be passed to <code>Colors.parse(Colorant, c)</code>, so <code>:red</code> is equivalent to <code>colorant"red"</code></li>
+<li><code>false</code> or <code>nothing</code> will be converted to an invisible <code>RGBA(0,0,0,0)</code></li>
+<li>Any <code>Colors.Colorant</code>, with or without alpha/opacity</li>
+<li>Any <code>Plots.ColorScheme</code>, which includes <code>ColorVector</code>, <code>ColorGradient</code>, etc</li>
+<li>An integer, which picks the corresponding color from the <code>seriescolor</code></li>
+</ul>
+<p>In addition, there is an extensive facility for selecting and generating color maps/gradients.</p>
+<ul>
+<li>A valid Symbol: <code>:inferno</code> (the default), <code>:heat</code>, <code>:blues</code>, etc</li>
+<li>A list of colors (or anything that can be converted to a color)</li>
+<li>A pre-built <code>ColorGradient</code>, which can be constructed with the <code>cgrad</code> helper function.  See <a href="https://github.com/tbreloff/ExamplePlots.jl/blob/master/notebooks/cgrad.ipynb">this short tutorial</a> for example usage.</li>
+</ul>
+<hr />
+<p><a id='Series-Colors-1'></a></p>
+<h4 id="series-colors">Series Colors</h4>
+<p>For series, there are a few attributes to know:</p>
+<ul>
+<li><strong>seriescolor</strong>: Not used directly, but defines the base color for the series</li>
+<li><strong>linecolor</strong>: Color of paths</li>
+<li><strong>fillcolor</strong>: Color of area fill</li>
+<li><strong>markercolor</strong>: Color of the interior of markers and shapes</li>
+<li><strong>markerstrokecolor</strong>: Color of the border/stroke of markers and shapes</li>
+</ul>
+<p><code>seriescolor</code> defaults to <code>:auto</code>, and gets assigned a color from the <code>color_palette</code> based on its index in the subplot.  By default, the other colors <code>:match</code>.  (See the table below)</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In general, color gradients can be set by <code>*color</code>, and the corresponding color values to look up in the gradients by <code>*_z</code>.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th align="right">This color...</th>
+<th align="right">matches this color...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">linecolor</td>
+<td align="right">seriescolor</td>
+</tr>
+<tr>
+<td align="right">fillcolor</td>
+<td align="right">seriescolor</td>
+</tr>
+<tr>
+<td align="right">markercolor</td>
+<td align="right">seriescolor</td>
+</tr>
+<tr>
+<td align="right">markerstrokecolor</td>
+<td align="right">foreground<em>color</em>subplot</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>each of these attributes have a corresponding alpha override: <code>seriesalpha</code>, <code>linealpha</code>, <code>fillalpha</code>, <code>markeralpha</code>, and <code>markerstrokealpha</code>.  They are optional, and you can still give alpha information as part of an <code>Colors.RGBA</code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In some contexts, and when the user hasn't set a value, the <code>linecolor</code> or <code>markerstrokecolor</code> may be overridden.</p>
+</div>
+<hr />
+<p><a id='Foreground/Background-1'></a></p>
+<h4 id="foregroundbackground">Foreground/Background</h4>
+<p>Foreground and background colors work similarly:</p>
+<table>
+<thead>
+<tr>
+<th align="right">This color...</th>
+<th align="right">matches this color...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">background_color_outside</td>
+<td align="right">background_color</td>
+</tr>
+<tr>
+<td align="right">background_color_subplot</td>
+<td align="right">background_color</td>
+</tr>
+<tr>
+<td align="right">background_color_legend</td>
+<td align="right">background_color_subplot</td>
+</tr>
+<tr>
+<td align="right">background_color_inside</td>
+<td align="right">background_color_subplot</td>
+</tr>
+<tr>
+<td align="right">foreground_color_subplot</td>
+<td align="right">foreground_color</td>
+</tr>
+<tr>
+<td align="right">foreground_color_legend</td>
+<td align="right">foreground_color_subplot</td>
+</tr>
+<tr>
+<td align="right">foreground_color_grid</td>
+<td align="right">foreground_color_subplot</td>
+</tr>
+<tr>
+<td align="right">foreground_color_title</td>
+<td align="right">foreground_color_subplot</td>
+</tr>
+<tr>
+<td align="right">foreground_color_axis</td>
+<td align="right">foreground_color_subplot</td>
+</tr>
+<tr>
+<td align="right">foreground_color_border</td>
+<td align="right">foreground_color_subplot</td>
+</tr>
+<tr>
+<td align="right">foreground_color_guide</td>
+<td align="right">foreground_color_subplot</td>
+</tr>
+<tr>
+<td align="right">foreground_color_text</td>
+<td align="right">foreground_color_subplot</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><a id='Misc-1'></a></p>
+<h4 id="misc">Misc</h4>
+<ul>
+<li>the <code>linecolor</code> under the default theme is not CSS-defined, but close to <code>:steelblue</code>.</li>
+<li><code>line_z</code> and <code>marker_z</code> parameters will map data values into a ColorGradient value</li>
+<li>
+<p><code>color_palette</code> determines the colors assigned when <code>seriescolor == :auto</code>:</p>
+<ul>
+<li>If passed a vector of colors, it will force cycling of those colors</li>
+<li>If passed a gradient, it will infinitely draw unique colors from that gradient, attempting to spread them out</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><a id='Colorschemes-1'></a></p>
+<h4 id="colorschemes">Colorschemes</h4>
+<p>Color gradients are arranged into color libraries. To get a list of color libraries, use the <code>clibraries</code> function. To get a list of color gradients in each library, call <code>cgradients(library)</code>. <code>showlibrary(library)</code> creates a visual representation of color schemes. To change the active library, use <code>clibrary(library)</code>. This is only necessary in the case of namespace clashes, e.g. there are multiple <code>:blues</code>. The gradients can be reversed by appending <code>_r</code>, e.g. <code>:magma_r</code>. The <code>clims::NTuple{2,Number}</code> attribute can be used to define the data values that correspond with the ends of the schemes.</p>
+<p>The following libraries and gradients are included in Plots:</p>
+<p><a id='Plots-1'></a></p>
+<h5 id="plots">Plots</h5>
+<p><em>Created by Nathaniel J. Smith, Stefan van der Walt, and (in the case of viridis) Eric Firing. Released under CC0 license / public domain dedication. Full license info available <a href="https://github.com/JuliaPlots/PlotUtils.jl/blob/master/LICENSE.md#matplotlib">here</a>.</em></p>
+<p><img alt="" src="../examples/img/colorschemes/Plots.png" /></p>
+<p><a id='cmocean-1'></a></p>
+<h5 id="cmocean">cmocean</h5>
+<p><em>Released under The MIT License (MIT) Copyright (c) 2015 Kristen M. Thyng. RGB values were taken from https://github.com/matplotlib/cmocean/tree/master/cmocean/rgb</em></p>
+<p><img alt="" src="../examples/img/colorschemes/cmocean.png" /></p>
+<p><a id='misc-1'></a></p>
+<h5 id="misc_1">misc</h5>
+<p><img alt="" src="../examples/img/colorschemes/misc.png" /></p>
+<p><a id='colorcet-1'></a></p>
+<h5 id="colorcet">colorcet</h5>
+<p><em>Released under The MIT License (MIT) Copyright (c) 2015 Peter Kovesi. These are the perceptually correct color maps designed by Peter Kovesi and described in Peter Kovesi. Good Colour Maps: How to Design Them. arXiv:1509.03700 [cs.GR] 2015</em></p>
+<p><img alt="" src="../examples/img/colorschemes/colorcet.png" /></p>
+<p><a id='colorbrewer-1'></a></p>
+<h5 id="colorbrewer">colorbrewer</h5>
+<p><em>Created by Cynthia Brewer, Mark Harrower, and The Pennsylvania State University. Released under the Apache License, Version 2.0. Full license info available <a href="https://github.com/JuliaPlots/PlotUtils.jl/blob/master/LICENSE.md#colorbrewer">here</a>.</em></p>
+<p><img alt="" src="../examples/img/colorschemes/colorbrewer.png" /></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../recipes/" title="Recipes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Recipes
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../animations/" title="Animations" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Animations
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2015-2016 Thomas Breloff
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.30f6b8b1.js"></script>
+      
+      <script>app.initialize({version:"0.17.5",url:{base:".."}})</script>
+      
+        <script src="../mathjax-config.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
