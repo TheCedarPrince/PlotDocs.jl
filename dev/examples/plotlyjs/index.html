@@ -1103,7 +1103,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref1.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref1.png" /></p>
 <p><a id='plotlyjs-ref3-1'></a></p>
 <h3 id="parametric-plots">Parametric plots</h3>
 <p>Plot function pair (x(u), y(u)).</p>
@@ -1113,7 +1113,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref3.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref3.png" /></p>
 <p><a id='plotlyjs-ref4-1'></a></p>
 <h3 id="colors">Colors</h3>
 <p>Access predefined palettes (or build your own with the <code>colorscheme</code> method). Line/marker colors are auto-generated from the plot's palette, unless overridden.  Set the <code>z</code> argument to turn on series gradients.</p>
@@ -1123,7 +1123,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref4.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref4.png" /></p>
 <p><a id='plotlyjs-ref5-1'></a></p>
 <h3 id="global">Global</h3>
 <p>Change the guides/background/limits/ticks.  Convenience args <code>xaxis</code> and <code>yaxis</code> allow you to pass a tuple or value which will be mapped to the relevant args automatically. The <code>xaxis</code> below will be replaced with <code>xlabel</code> and <code>xlims</code> args automatically during the preprocessing step. You can also use shorthand functions: <code>title!</code>, <code>xaxis!</code>, <code>yaxis!</code>, <code>xlabel!</code>, <code>ylabel!</code>, <code>xlims!</code>, <code>ylims!</code>, <code>xticks!</code>, <code>yticks!</code></p>
@@ -1137,7 +1137,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref5.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref5.png" /></p>
 <p><a id='plotlyjs-ref6-1'></a></p>
 <h3 id="images">Images</h3>
 <p>Plot an image.  y-axis is set to flipped</p>
@@ -1148,7 +1148,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref6.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref6.png" /></p>
 <p><a id='plotlyjs-ref7-1'></a></p>
 <h3 id="arguments">Arguments</h3>
 <p>Plot multiple series with different numbers of points.  Mix arguments that apply to all series (marker/markersize) with arguments unique to each series (colors).  Special arguments <code>line</code>, <code>marker</code>, and <code>fill</code> will automatically figure out what arguments to set (for example, we are setting the <code>linestyle</code>, <code>linewidth</code>, and <code>color</code> arguments with <code>line</code>.)  Note that we pass a matrix of colors, and this applies the colors to each series.</p>
@@ -1157,7 +1157,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref7.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref7.png" /></p>
 <p><a id='plotlyjs-ref8-1'></a></p>
 <h3 id="build-plot-in-pieces">Build plot in pieces</h3>
 <p>Start with a base plot...</p>
@@ -1165,20 +1165,20 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref8.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref8.png" /></p>
 <p>and add to it later.</p>
 <div class="codehilite"><pre><span></span><span class="n">scatter!</span><span class="p">(</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">c</span><span class="o">=:</span><span class="n">orange</span><span class="p">)</span>
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref9.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref9.png" /></p>
 <p><a id='plotlyjs-ref10-1'></a></p>
 <h3 id="histogram2d">Histogram2D</h3>
 <div class="codehilite"><pre><span></span><span class="n">histogram2d</span><span class="p">(</span><span class="n">randn</span><span class="p">(</span><span class="mi">10000</span><span class="p">),</span> <span class="n">randn</span><span class="p">(</span><span class="mi">10000</span><span class="p">),</span> <span class="n">nbins</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref10.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref10.png" /></p>
 <p><a id='plotlyjs-ref11-1'></a></p>
 <h3 id="line-types">Line types</h3>
 <div class="codehilite"><pre><span></span><span class="n">linetypes</span> <span class="o">=</span> <span class="p">[</span><span class="o">:</span><span class="n">path</span> <span class="o">:</span><span class="n">steppre</span> <span class="o">:</span><span class="n">steppost</span> <span class="o">:</span><span class="n">sticks</span> <span class="o">:</span><span class="n">scatter</span><span class="p">]</span>
@@ -1189,7 +1189,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref11.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref11.png" /></p>
 <p><a id='plotlyjs-ref12-1'></a></p>
 <h3 id="line-styles">Line styles</h3>
 <div class="codehilite"><pre><span></span><span class="n">styles</span> <span class="o">=</span> <span class="n">filter</span><span class="p">((</span><span class="n">s</span><span class="o">-&gt;</span><span class="k">begin</span>
@@ -1202,7 +1202,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref12.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref12.png" /></p>
 <p><a id='plotlyjs-ref13-1'></a></p>
 <h3 id="marker-types">Marker types</h3>
 <div class="codehilite"><pre><span></span><span class="n">markers</span> <span class="o">=</span> <span class="n">filter</span><span class="p">((</span><span class="n">m</span><span class="o">-&gt;</span><span class="k">begin</span>
@@ -1216,7 +1216,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref13.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref13.png" /></p>
 <p><a id='plotlyjs-ref14-1'></a></p>
 <h3 id="bar">Bar</h3>
 <p>x is the midpoint of the bar. (todo: allow passing of edges instead of midpoints)</p>
@@ -1224,14 +1224,14 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref14.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref14.png" /></p>
 <p><a id='plotlyjs-ref15-1'></a></p>
 <h3 id="histogram">Histogram</h3>
 <div class="codehilite"><pre><span></span><span class="n">histogram</span><span class="p">(</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span> <span class="n">bins</span><span class="o">=:</span><span class="n">scott</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">repeat</span><span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span> <span class="n">outer</span><span class="o">=</span><span class="mi">200</span><span class="p">))</span>
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref15.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref15.png" /></p>
 <p><a id='plotlyjs-ref16-1'></a></p>
 <h3 id="subplots">Subplots</h3>
 <p>Use the <code>layout</code> keyword, and optionally the convenient <code>@layout</code> macro to generate arbitrarily complex subplot layouts.</p>
@@ -1240,7 +1240,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref16.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref16.png" /></p>
 <p><a id='plotlyjs-ref17-1'></a></p>
 <h3 id="adding-to-subplots">Adding to subplots</h3>
 <p>Note here the automatic grid layout, as well as the order in which new series are added to the plots.</p>
@@ -1248,14 +1248,14 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref17.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref17.png" /></p>
 <div class="codehilite"><pre><span></span><span class="k">using</span> <span class="n">Random</span>
 <span class="n">Random</span><span class="o">.</span><span class="n">seed!</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
 <span class="n">plot!</span><span class="p">(</span><span class="n">Plots</span><span class="o">.</span><span class="n">fakedata</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref18.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref18.png" /></p>
 <p><a id='plotlyjs-ref19-1'></a></p>
 <h3 id="openhighlowclose">Open/High/Low/Close</h3>
 <p>Create an OHLC chart.  Pass in a list of (open,high,low,close) tuples as your <code>y</code> argument.  This uses recipes to first convert the tuples to OHLC objects, and subsequently create a :path series with the appropriate line segments.</p>
@@ -1269,7 +1269,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref19.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref19.png" /></p>
 <p><a id='plotlyjs-ref20-1'></a></p>
 <h3 id="annotations">Annotations</h3>
 <p>The <code>annotations</code> keyword is used for text annotations in data-coordinates.  Pass in a tuple (x,y,text) or a vector of annotations.  <code>annotate!(ann)</code> is shorthand for <code>plot!(; annotation=ann)</code>.  Series annotations are used for annotating individual data points. They require only the annotation... x/y values are computed.  A <code>PlotText</code> object can be build with the method <code>text(string, attr...)</code>, which wraps font and color attributes.</p>
@@ -1280,7 +1280,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref20.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref20.png" /></p>
 <p><a id='plotlyjs-ref22-1'></a></p>
 <h3 id="contours">Contours</h3>
 <p>Any value for fill works here.  We first build a filled contour from a function, then an unfilled contour from a matrix.</p>
@@ -1298,7 +1298,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref22.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref22.png" /></p>
 <p><a id='plotlyjs-ref23-1'></a></p>
 <h3 id="pie">Pie</h3>
 <div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Nerds&quot;</span><span class="p">,</span> <span class="s">&quot;Hackers&quot;</span><span class="p">,</span> <span class="s">&quot;Scientists&quot;</span><span class="p">]</span>
@@ -1307,7 +1307,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref23.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref23.png" /></p>
 <p><a id='plotlyjs-ref24-1'></a></p>
 <h3 id="3d">3D</h3>
 <div class="codehilite"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
@@ -1320,7 +1320,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref24.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref24.png" /></p>
 <p><a id='plotlyjs-ref26-1'></a></p>
 <h3 id="groups-and-subplots">Groups and Subplots</h3>
 <div class="codehilite"><pre><span></span><span class="n">group</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="n">map</span><span class="p">((</span><span class="n">i</span><span class="o">-&gt;</span><span class="k">begin</span>
@@ -1330,7 +1330,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref26.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref26.png" /></p>
 <p><a id='plotlyjs-ref27-1'></a></p>
 <h3 id="polar-plots">Polar Plots</h3>
 <div class="codehilite"><pre><span></span><span class="n">Θ</span> <span class="o">=</span> <span class="n">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mf">1.5</span><span class="nb">π</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
@@ -1339,7 +1339,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref27.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref27.png" /></p>
 <p><a id='plotlyjs-ref28-1'></a></p>
 <h3 id="heatmap-categorical-axes-and-aspect_ratio">Heatmap, categorical axes, and aspect_ratio</h3>
 <div class="codehilite"><pre><span></span><span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">]</span>
@@ -1349,7 +1349,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref28.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref28.png" /></p>
 <p><a id='plotlyjs-ref29-1'></a></p>
 <h3 id="layouts-margins-label-rotation-title-location">Layouts, margins, label rotation, title location</h3>
 <div class="codehilite"><pre><span></span><span class="k">using</span> <span class="n">Plots</span><span class="o">.</span><span class="n">PlotMeasures</span>
@@ -1357,7 +1357,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref29.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref29.png" /></p>
 <p><a id='plotlyjs-ref32-1'></a></p>
 <h3 id="spy">Spy</h3>
 <p>For a matrix <code>mat</code> with unique nonzeros <code>spy(mat)</code> returns a colorless plot. If <code>mat</code> has various different nonzero values, a colorbar is added. The colorbar can be disabled with <code>legend = nothing</code>.</p>
@@ -1368,7 +1368,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref32.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref32.png" /></p>
 <p><a id='plotlyjs-ref33-1'></a></p>
 <h3 id="magic-grid-argument">Magic grid argument</h3>
 <p>The grid lines can be modified individually for each axis with the magic <code>grid</code> argument.</p>
@@ -1381,7 +1381,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref33.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref33.png" /></p>
 <p><a id='plotlyjs-ref34-1'></a></p>
 <h3 id="framestyle">Framestyle</h3>
 <p>The style of the frame/axes of a (sub)plot can be changed with the <code>framestyle</code> attribute. The default framestyle is <code>:axes</code>.</p>
@@ -1389,7 +1389,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref34.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref34.png" /></p>
 <p><a id='plotlyjs-ref35-1'></a></p>
 <h3 id="lines-and-markers-with-varying-colors">Lines and markers with varying colors</h3>
 <p>You can use the <code>line_z</code> and <code>marker_z</code> properties to associate a color with each line segment or marker in the plot.</p>
@@ -1405,7 +1405,7 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref35.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref35.png" /></p>
 <p><a id='plotlyjs-ref36-1'></a></p>
 <h3 id="portfolio-composition-maps">Portfolio Composition maps</h3>
 <p>see: http://stackoverflow.com/a/37732384/5075246</p>
@@ -1421,14 +1421,14 @@
 </pre></div>
 
 
-<p><img alt="" src="../../home/travis/build/JuliaPlots/PlotDocs.jl/docs/src/examples/img/plotlyjs/ref36.png" /></p>
+<p><img alt="" src="../img/plotlyjs/ref36.png" /></p>
 <ul>
 <li>Supported arguments: <code>annotations</code>, <code>aspect_ratio</code>, <code>background_color</code>, <code>background_color_inside</code>, <code>background_color_legend</code>, <code>background_color_outside</code>, <code>background_color_subplot</code>, <code>bar_width</code>, <code>bins</code>, <code>bottom_margin</code>, <code>camera</code>, <code>clims</code>, <code>color_palette</code>, <code>colorbar</code>, <code>colorbar_entry</code>, <code>colorbar_title</code>, <code>contour_labels</code>, <code>discrete_values</code>, <code>fill_z</code>, <code>fillalpha</code>, <code>fillcolor</code>, <code>fillrange</code>, <code>flip</code>, <code>foreground_color</code>, <code>foreground_color_axis</code>, <code>foreground_color_border</code>, <code>foreground_color_grid</code>, <code>foreground_color_guide</code>, <code>foreground_color_legend</code>, <code>foreground_color_subplot</code>, <code>foreground_color_text</code>, <code>foreground_color_title</code>, <code>framestyle</code>, <code>grid</code>, <code>gridalpha</code>, <code>gridlinewidth</code>, <code>group</code>, <code>guide</code>, <code>guidefont</code>, <code>guidefontcolor</code>, <code>guidefontfamily</code>, <code>guidefontsize</code>, <code>hover</code>, <code>html_output_format</code>, <code>inset_subplots</code>, <code>label</code>, <code>layout</code>, <code>left_margin</code>, <code>legend</code>, <code>legendfont</code>, <code>legendfontcolor</code>, <code>legendfontfamily</code>, <code>legendfontsize</code>, <code>levels</code>, <code>lims</code>, <code>line_z</code>, <code>linealpha</code>, <code>linecolor</code>, <code>linestyle</code>, <code>linewidth</code>, <code>link</code>, <code>margin</code>, <code>marker_z</code>, <code>markeralpha</code>, <code>markercolor</code>, <code>markershape</code>, <code>markersize</code>, <code>markerstrokealpha</code>, <code>markerstrokecolor</code>, <code>markerstrokestyle</code>, <code>markerstrokewidth</code>, <code>normalize</code>, <code>orientation</code>, <code>polar</code>, <code>primary</code>, <code>projection</code>, <code>quiver</code>, <code>ribbon</code>, <code>right_margin</code>, <code>rotation</code>, <code>scale</code>, <code>series_annotations</code>, <code>seriesalpha</code>, <code>seriescolor</code>, <code>seriestype</code>, <code>show</code>, <code>size</code>, <code>smooth</code>, <code>subplot</code>, <code>subplot_index</code>, <code>tick_direction</code>, <code>tickfont</code>, <code>tickfontcolor</code>, <code>tickfontfamily</code>, <code>tickfontsize</code>, <code>ticks</code>, <code>title</code>, <code>title_location</code>, <code>titlefontcolor</code>, <code>titlefontfamily</code>, <code>titlefonthalign</code>, <code>titlefontsize</code>, <code>titlefontvalign</code>, <code>top_margin</code>, <code>weights</code>, <code>window_title</code>, <code>x</code>, <code>xdiscrete_values</code>, <code>xerror</code>, <code>xflip</code>, <code>xforeground_color_axis</code>, <code>xforeground_color_border</code>, <code>xforeground_color_grid</code>, <code>xforeground_color_guide</code>, <code>xforeground_color_text</code>, <code>xgrid</code>, <code>xgridalpha</code>, <code>xgridlinewidth</code>, <code>xguide</code>, <code>xguidefontcolor</code>, <code>xguidefontfamily</code>, <code>xguidefontsize</code>, <code>xlims</code>, <code>xlink</code>, <code>xrotation</code>, <code>xscale</code>, <code>xtick_direction</code>, <code>xtickfontcolor</code>, <code>xtickfontfamily</code>, <code>xtickfontsize</code>, <code>xticks</code>, <code>y</code>, <code>ydiscrete_values</code>, <code>yerror</code>, <code>yflip</code>, <code>yforeground_color_axis</code>, <code>yforeground_color_border</code>, <code>yforeground_color_grid</code>, <code>yforeground_color_guide</code>, <code>yforeground_color_text</code>, <code>ygrid</code>, <code>ygridalpha</code>, <code>ygridlinewidth</code>, <code>yguide</code>, <code>yguidefontcolor</code>, <code>yguidefontfamily</code>, <code>yguidefontsize</code>, <code>ylims</code>, <code>ylink</code>, <code>yrotation</code>, <code>yscale</code>, <code>ytick_direction</code>, <code>ytickfontcolor</code>, <code>ytickfontfamily</code>, <code>ytickfontsize</code>, <code>yticks</code>, <code>z</code>, <code>zdiscrete_values</code>, <code>zflip</code>, <code>zforeground_color_axis</code>, <code>zforeground_color_border</code>, <code>zforeground_color_grid</code>, <code>zforeground_color_guide</code>, <code>zforeground_color_text</code>, <code>zgrid</code>, <code>zgridalpha</code>, <code>zgridlinewidth</code>, <code>zguide</code>, <code>zguidefontcolor</code>, <code>zguidefontfamily</code>, <code>zguidefontsize</code>, <code>zlims</code>, <code>zlink</code>, <code>zrotation</code>, <code>zscale</code>, <code>ztick_direction</code>, <code>ztickfontcolor</code>, <code>ztickfontfamily</code>, <code>ztickfontsize</code>, <code>zticks</code></li>
 <li>Supported values for linetype: <code>:contour</code>, <code>:heatmap</code>, <code>:path</code>, <code>:path3d</code>, <code>:pie</code>, <code>:scatter</code>, <code>:scatter3d</code>, <code>:scattergl</code>, <code>:shape</code>, <code>:straightline</code>, <code>:surface</code>, <code>:wireframe</code></li>
 <li>Supported values for linestyle: <code>:auto</code>, <code>:dash</code>, <code>:dashdot</code>, <code>:dot</code>, <code>:solid</code></li>
 <li>Supported values for marker: <code>:auto</code>, <code>:circle</code>, <code>:cross</code>, <code>:diamond</code>, <code>:dtriangle</code>, <code>:hexagon</code>, <code>:hline</code>, <code>:none</code>, <code>:octagon</code>, <code>:pentagon</code>, <code>:rect</code>, <code>:utriangle</code>, <code>:vline</code>, <code>:xcross</code></li>
 </ul>
-<p>(Automatically generated: 2019-08-28T17:04:10.575)</p>
+<p>(Automatically generated: 2019-08-28T18:01:29.153)</p>
                 
                   
                 
