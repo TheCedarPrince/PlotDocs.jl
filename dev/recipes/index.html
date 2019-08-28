@@ -981,20 +981,19 @@
 <p>We create a new type <code>MyType</code>, which is empty, and used purely for dispatch.  Our goal here is to create a random path of <code>n</code> points.</p>
 <p>There are a few important things to know, after which recipes boil down to updating an attribute dictionary and returning input data:</p>
 <ul>
-<li>A recipe signature <code>f(args...; kw...)</code> is converted into a definition of <code>apply_recipe(plotattributes::KW, args...)</code> where:</li>
-</ul>
-<div class="codehilite"><pre><span></span>- `<span class="n">plotattributes</span>` <span class="k">is</span> <span class="n">an</span> <span class="n">attribute</span> <span class="n">dictionary</span> <span class="k">of</span> <span class="n">type</span> `<span class="n">typealias</span> <span class="n">KW</span> <span class="n">Dict</span>{<span class="n">Symbol</span>,<span class="nb">Any</span>}`
-- <span class="n">Your</span> `<span class="n">args</span>` <span class="n">must</span> <span class="n">be</span> <span class="n">distinct</span> <span class="n">enough</span> <span class="n">that</span> <span class="n">dispatch</span> <span class="k">will</span> <span class="n">call</span> <span class="n">your</span> <span class="n">definition</span> (<span class="o">and</span> <span class="n">without</span> <span class="n">masking</span> <span class="n">an</span> <span class="n">existing</span> <span class="n">definition</span>).  <span class="n">Using</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">data</span> <span class="n">type</span> <span class="k">will</span> <span class="n">ensure</span> <span class="n">proper</span> <span class="n">dispatch</span>.
-- <span class="n">The</span> <span class="n">function</span> `<span class="n">f</span>` <span class="k">is</span> <span class="n">unused</span><span class="o">/</span><span class="n">meaningless</span>... <span class="n">call</span> <span class="n">it</span> <span class="n">whatever</span> <span class="n">you</span> <span class="nb">want</span>.
-</pre></div>
-
-
+<li>
+<p>A recipe signature <code>f(args...; kw...)</code> is converted into a definition of <code>apply_recipe(plotattributes::KW, args...)</code> where:</p>
 <ul>
+<li><code>plotattributes</code> is an attribute dictionary of type <code>typealias KW Dict{Symbol,Any}</code></li>
+<li>Your <code>args</code> must be distinct enough that dispatch will call your definition (and without masking an existing definition).  Using a custom data type will ensure proper dispatch.</li>
+<li>The function <code>f</code> is unused/meaningless... call it whatever you want.</li>
 <li>The special operator <code>--&gt;</code> turns <code>linecolor --&gt; :blue</code> into <code>get!(plotattributes, :linecolor, :blue)</code>, setting the attribute only when it doesn't already exist.  (Tip: Wrap the right hand side in parentheses for complex expressions.)</li>
 <li>The special operator <code>:=</code> turns <code>seriestype := :path</code> into <code>plotattributes[:seriestype] = :path</code>, forcing that attribute value.  (Tip: Wrap the right hand side in parentheses for complex expressions.)</li>
 <li>The return value of the recipe is the <code>args</code> of a <code>RecipeData</code> object, which also has a reference to the attribute dictionary.</li>
 <li>A recipe returns a Vector{RecipeData}.  We'll see how to add to this list later with the <code>@series</code> macro.</li>
 <li>One cannot use aliases (such as <code>colour</code> or <code>alpha</code>) in a recipe, only the full attribute name.</li>
+</ul>
+</li>
 </ul>
 <p>Breaking down the example:</p>
 <p>In the example above, we use <code>MyType</code> for dispatch, with optional positional argument <code>n::Integer</code>:</p>
@@ -1115,7 +1114,7 @@
     <span class="n">grid</span> <span class="o">:=</span> <span class="kc">false</span>
     <span class="n">foreground_color_subplot</span> <span class="o">:=</span> <span class="p">[</span><span class="n">RGBA</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">:</span><span class="n">match</span> <span class="n">RGBA</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)]</span>
     <span class="n">layout</span> <span class="o">:=</span> <span class="nd">@layout</span> <span class="p">[</span><span class="n">tophist</span>           <span class="n">_</span>
-                       <span class="n">hist2d</span><span class="p">{</span><span class="mf">0.9</span><span class="n">w</span><span class="p">,</span><span class="mf">0.9</span><span class="n">h</span><span class="p">}</span> <span class="n">righthist</span><span class="p">]</span>
+                        <span class="n">hist2d</span><span class="p">{</span><span class="mf">0.9</span><span class="n">w</span><span class="p">,</span><span class="mf">0.9</span><span class="n">h</span><span class="p">}</span> <span class="n">righthist</span><span class="p">]</span>
 
     <span class="c"># main histogram2d</span>
     <span class="nd">@series</span> <span class="k">begin</span>
@@ -1194,7 +1193,7 @@
     <span class="n">grid</span> <span class="o">:=</span> <span class="kc">false</span>
     <span class="n">foreground_color_subplot</span> <span class="o">:=</span> <span class="p">[</span><span class="n">RGBA</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">:</span><span class="n">match</span> <span class="n">RGBA</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)]</span>
     <span class="n">layout</span> <span class="o">:=</span> <span class="nd">@layout</span> <span class="p">[</span><span class="n">tophist</span>           <span class="n">_</span>
-                       <span class="n">hist2d</span><span class="p">{</span><span class="mf">0.9</span><span class="n">w</span><span class="p">,</span><span class="mf">0.9</span><span class="n">h</span><span class="p">}</span> <span class="n">righthist</span><span class="p">]</span>
+                        <span class="n">hist2d</span><span class="p">{</span><span class="mf">0.9</span><span class="n">w</span><span class="p">,</span><span class="mf">0.9</span><span class="n">h</span><span class="p">}</span> <span class="n">righthist</span><span class="p">]</span>
 </pre></div>
 
 
