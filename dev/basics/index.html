@@ -285,44 +285,12 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Basics
-      </label>
     
     <a href="./" title="Basics" class="md-nav__link md-nav__link--active">
       Basics
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-concepts" title="Basic Concepts" class="md-nav__link">
-    Basic Concepts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#useful-tips" title="Useful Tips" class="md-nav__link">
-    Useful Tips
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -658,29 +626,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-concepts" title="Basic Concepts" class="md-nav__link">
-    Basic Concepts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#useful-tips" title="Useful Tips" class="md-nav__link">
-    Useful Tips
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
   
 </nav>
                   </div>
@@ -694,8 +641,6 @@
                 
                   <a href="https://github.com/JuliaPlots/PlotDocs.jl/blob/master/docs/src/basics.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
-                
-                  <h1>Basics</h1>
                 
                 <p><a id='Basic-Concepts-1'></a></p>
 <h3 id="basic-concepts">Basic Concepts</h3>
@@ -733,39 +678,37 @@
 <hr />
 <p><a id='Useful-Tips-1'></a></p>
 <h3 id="useful-tips">Useful Tips</h3>
-<div style="background-color: lightblue; padding: 10px; border-style: solid; border-width: medium; margin: 10px;">
-Tip: A common error is to pass a Vector when you intend for each item to apply to only one series.  Instead of an n-length Vector, pass a 1xn Matrix.
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A common error is to pass a Vector when you intend for each item to apply to only one series. Instead of an n-length Vector, pass a 1xn Matrix.</p>
 </div>
-
-<div style="background-color: lightblue; padding: 10px; border-style: solid; border-width: medium; margin: 10px;">
-  <p>Tip: You can update certain plot settings after plot creation:</p>
-  <pre><code>
-    plot!(title = "New Title", xlabel = "New xlabel", ylabel = "New ylabel")
-    plot!(xlims = (0, 5.5), ylims = (-2.2, 6), xticks = 0:0.5:10, yticks = [0,1,5,10])
-
-    # or using magic:
-    plot!(xaxis = ("mylabel", :log10, :flip))
-    xaxis!("mylabel", :log10, :flip)
-  </code></pre>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can update certain plot settings after plot creation:</p>
+<p>```julia
+plot!(title = "New Title", xlabel = "New xlabel", ylabel = "New ylabel")
+plot!(xlims = (0, 5.5), ylims = (-2.2, 6), xticks = 0:0.5:10, yticks = [0,1,5,10])</p>
+<h1 id="or-using-magic">or using magic:</h1>
+<p>plot!(xaxis = ("mylabel", :log10, :flip))
+xaxis!("mylabel", :log10, :flip)
+```</p>
 </div>
-
-<div style="background-color: lightblue; padding: 10px; border-style: solid; border-width: medium; margin: 10px;">
-Tip: With <a href="supported">supported backends</a>, you can pass a Plots.Shape object for the marker/markershape arguments.  Shape takes a vector of 2-tuples in the constructor, defining the points of the polygon's shape in a unit-scaled coordinate space.  To make a square, for example, you could do: Shape([(1,1),(1,-1),(-1,-1),(-1,1)])
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>With <a href="../supported/#supported-1">supported backends</a>, you can pass a <code>Plots.Shape</code> object for the marker/markershape arguments. <code>Shape</code> takes a vector of 2-tuples in the constructor, defining the points of the polygon's shape in a unit-scaled coordinate space.  To make a square, for example, you could do: <code>Shape([(1,1),(1,-1),(-1,-1),(-1,1)])</code></p>
 </div>
-
-<div style="background-color: lightblue; padding: 10px; border-style: solid; border-width: medium; margin: 10px;">
-Tip: You can see the default value for a given argument with default(arg::Symbol), and set the default value with default(arg::Symbol, value) or default(; kw...).  For example set the
-default window size and whether we should show a legend with default(size=(600,400), leg=false).
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can see the default value for a given argument with <code>default(arg::Symbol)</code>, and set the default value with <code>default(arg::Symbol, value)</code> or <code>default(; kw...)</code>. For example set the default window size and whether we should show a legend with <code>default(size=(600,400), leg=false)</code>.</p>
 </div>
-
-<div style="background-color: lightblue; padding: 10px; border-style: solid; border-width: medium; margin: 10px;">
-Tip: Call `gui()` to display the plot in a window.  Interactivity depends on backend.  Plotting at the REPL (without semicolon) implicitly calls `gui()`.
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Call <code>gui()</code> to display the plot in a window. Interactivity depends on backend. Plotting at the REPL (without semicolon) implicitly calls <code>gui()</code>.</p>
 </div>
-
-<div style="background-color: lightblue; padding: 10px; border-style: solid; border-width: medium; margin: 10px;">
-Tip: See the <a href="../examples/pyplot">examples</a> for plotting ideas and features.
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>See the <a href="../examples/gr/#gr-examples-1">examples</a> for plotting ideas and features.</p>
 </div>
-
 <hr />
                 
                   

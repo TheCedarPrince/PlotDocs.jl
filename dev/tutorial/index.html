@@ -865,7 +865,7 @@
 </pre></div>
 
 
-<p><img alt="first_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/lines_1.png" /></p>
+<p><img alt="first_plot" src="../examples/img/tutorial/lines_1.png" /></p>
 <p>The plot is displayed in a plot pane, a stand-alone window or the browser, depending on the environment and backend (see <a href="./#plotting-backends-1">below</a>).</p>
 <p>In Plots.jl, every column is a <strong>series</strong>, i.e. a set of related points which form lines, surfaces, or other plotting primitives. Thus we can plot multiple lines by plotting a matrix of values and each column is interpreted as a separate line:</p>
 <div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c"># 2 columns means two lines</span>
@@ -873,14 +873,14 @@
 </pre></div>
 
 
-<p><img alt="twoseries_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/lines_2.png" /></p>
+<p><img alt="twoseries_plot" src="../examples/img/tutorial/lines_2.png" /></p>
 <p>Additionally, we can add more lines by mutating the plot object. This is done by the <code>plot!</code> command. Let's add another line to our current plot:</p>
 <div class="codehilite"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">plot!</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
 </pre></div>
 
 
-<p><img alt="addline_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/lines_3.png" /></p>
+<p><img alt="addline_plot" src="../examples/img/tutorial/lines_3.png" /></p>
 <p>Note that we could have done the same as above using an explicit plot variable:</p>
 <div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c"># 2 columns means two lines</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
@@ -889,7 +889,7 @@
 </pre></div>
 
 
-<p><img alt="explicit_p_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/lines_4.png" /></p>
+<p><img alt="explicit_p_plot" src="../examples/img/tutorial/lines_4.png" /></p>
 <p>Note that in the case where <code>p</code> is omitted, Plots.jl uses the global <code>Plots.CURRENT_PLOT</code> automatically in the same manner.</p>
 <p><a id='Plot-Attributes-1'></a></p>
 <h2 id="plot-attributes">Plot Attributes</h2>
@@ -900,13 +900,13 @@
 </pre></div>
 
 
-<p><img alt="first_attributes_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/attr_1.png" /></p>
+<p><img alt="first_attributes_plot" src="../examples/img/tutorial/attr_1.png" /></p>
 <p>Note that every attribute can also be applied by mutating the plot with a modifier function. For example, the <code>xlabel</code> attribute adds a label for the x-axis. We can in the plot command specify it via <code>xlabel=...</code> like we did above. Or we can use the modifier function to add it after the plot has already been generated:</p>
 <div class="codehilite"><pre><span></span><span class="n">xlabel!</span><span class="p">(</span><span class="s">&quot;My x label&quot;</span><span class="p">)</span>
 </pre></div>
 
 
-<p><img alt="add_x_label_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/attr_2.png" /></p>
+<p><img alt="add_x_label_plot" src="../examples/img/tutorial/attr_2.png" /></p>
 <p>Every modifier function is the name of the attribute followed by <code>!</code>. Note that this implicitly uses the global <code>Plots.CURRENT_PLOT</code> and we can apply it to other plot objects via <code>attribute!(p,value)</code>. For more examples of attributes in action, see the examples pages.</p>
 <p><a id='plotting-backends-1'></a></p>
 <h2 id="plotting-backends">Plotting Backends</h2>
@@ -920,8 +920,8 @@
 </pre></div>
 
 
-<p><img alt="plotly_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/backends_1.png" /></p>
-<p><img alt="gr_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/backends_2.png" /></p>
+<p><img alt="plotly_plot" src="../examples/img/tutorial/backends_1.png" /></p>
+<p><img alt="gr_plot" src="../examples/img/tutorial/backends_2.png" /></p>
 <p>If you're in Juno, the second plot command will cause the plot to open in the plot pane. If you're in the REPL, GR will open a GUI window. You can always open a GUI anyways by using the <code>gui()</code> command.</p>
 <p>Each plotting backend has a very different feel. Some have interactivity, some are faster and can deal with huge numbers of datapoints, and some can do 3D plots. Saving plots is done by the <code>savefig</code> command. As an example:</p>
 <div class="codehilite"><pre><span></span><span class="n">savefig</span><span class="p">(</span><span class="s">&quot;myplot.png&quot;</span><span class="p">)</span> <span class="c"># Saves the CURRENT_PLOT as a .png</span>
@@ -938,13 +938,13 @@
 </pre></div>
 
 
-<p><img alt="scatter_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/scatter_1.png" /></p>
+<p><img alt="scatter_plot" src="../examples/img/tutorial/scatter_1.png" /></p>
 <p>For each built-in series type, there is a shorthand function for directly calling that series type which matches the name of the series type. It handles attributes just the same as the <code>plot</code> command, and have a mutating form which ends in <code>!</code>. For example, we can instead do that scatter plot with:</p>
 <div class="codehilite"><pre><span></span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;My Scatter Plot&quot;</span><span class="p">)</span>
 </pre></div>
 
 
-<p><img alt="scatter_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/scatter_2.png" /></p>
+<p><img alt="scatter_plot" src="../examples/img/tutorial/scatter_2.png" /></p>
 <p>The series types which are available are dependent on the backend, and are documented on the <a href="../supported/#supported-1">Supported Attributes page</a>. As we will describe later, other libraries can add new series types via <strong>recipes</strong> as well.</p>
 <p><a id='Plotting-in-Scripts-1'></a></p>
 <h2 id="plotting-in-scripts">Plotting in Scripts</h2>
@@ -964,7 +964,7 @@
 </pre></div>
 
 
-<p><img alt="subplot_single_plot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/subplots_1.png" /></p>
+<p><img alt="subplot_single_plot" src="../examples/img/tutorial/subplots_1.png" /></p>
 <p>We can also use layouts on plots of plot objects. For example, we can generate for separate plots and make a single plot that combines them in a 2x2 grid via the following:</p>
 <div class="codehilite"><pre><span></span><span class="n">p1</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="c"># Make a line plot</span>
 <span class="n">p2</span> <span class="o">=</span> <span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="c"># Make a scatter plot</span>
@@ -974,7 +974,7 @@
 </pre></div>
 
 
-<p><img alt="multi_plot_subplot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/subplots_2.png" /></p>
+<p><img alt="multi_plot_subplot" src="../examples/img/tutorial/subplots_2.png" /></p>
 <p>Notice that the attributes in the individual plots are applied to the individual plots, while the attributes on the final <code>plot</code> call are applied to all of the subplots.</p>
 <p><a id='Plot-Recipes-and-Recipe-Libraries-1'></a></p>
 <h2 id="plot-recipes-and-recipe-libraries">Plot Recipes and Recipe Libraries</h2>
@@ -1006,13 +1006,13 @@
 </pre></div>
 
 
-<p><img alt="dataframeplot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/user_recipes_1.png" /></p>
+<p><img alt="dataframeplot" src="../examples/img/tutorial/user_recipes_1.png" /></p>
 <p>Notice there's not much you have to do here: all of the commands from before (attributes, series types, etc.) will still work on this data:</p>
 <div class="codehilite"><pre><span></span><span class="nd">@df</span> <span class="n">df</span> <span class="n">scatter</span><span class="p">(</span><span class="o">:</span><span class="n">a</span><span class="p">,</span> <span class="o">:</span><span class="n">b</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;My DataFrame Scatter Plot!&quot;</span><span class="p">)</span> <span class="c"># x = :a, y = :b</span>
 </pre></div>
 
 
-<p><img alt="dataframescatterplot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/user_recipes_2.png" /></p>
+<p><img alt="dataframescatterplot" src="../examples/img/tutorial/user_recipes_2.png" /></p>
 <p><a id='Using-a-Type-Recipe-1'></a></p>
 <h3 id="using-a-type-recipe">Using a Type Recipe</h3>
 <p>In addition, StatsPlots.jl extends Distributions.jl by adding a type recipe for its distribution types, so they can be directly interpreted as plotting data:</p>
@@ -1021,7 +1021,7 @@
 </pre></div>
 
 
-<p><img alt="distributionplot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/type_recipes.png" /></p>
+<p><img alt="distributionplot" src="../examples/img/tutorial/type_recipes.png" /></p>
 <p>Thus type recipes are a very convenient way to plot a specialized type which requires no more intervention!</p>
 <p><a id='Using-Plot-Recipes-1'></a></p>
 <h3 id="using-plot-recipes">Using Plot Recipes</h3>
@@ -1037,7 +1037,7 @@
 </pre></div>
 
 
-<p><img alt="marginalhistplot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/plot_recipes.png" /></p>
+<p><img alt="marginalhistplot" src="../examples/img/tutorial/plot_recipes.png" /></p>
 <p>This demonstrates two important facts. Notice that this is more than a series since it generates multiple series (i.e. there are multiple plots due to the hists on the top and right). Thus a plot recipe is not just a series but instead something like a new <code>plot</code> command.</p>
 <p><a id='Using-Series-Recipes-1'></a></p>
 <h3 id="using-series-recipes">Using Series Recipes</h3>
@@ -1047,13 +1047,13 @@
 </pre></div>
 
 
-<p><img alt="violinplot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/series_recipes_1.png" /></p>
+<p><img alt="violinplot" src="../examples/img/tutorial/series_recipes_1.png" /></p>
 <p>and we can add a <code>boxplot</code> on top using the same mutation commands as before:</p>
 <div class="codehilite"><pre><span></span><span class="n">boxplot!</span><span class="p">([</span><span class="s">&quot;Series 1&quot;</span> <span class="s">&quot;Series 2&quot;</span> <span class="s">&quot;Series 3&quot;</span> <span class="s">&quot;Series 4&quot;</span><span class="p">],</span><span class="n">y</span><span class="p">,</span><span class="n">leg</span><span class="o">=</span><span class="kc">false</span><span class="p">)</span>
 </pre></div>
 
 
-<p><img alt="violinboxplot" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/tutorial/series_recipes_2.png" /></p>
+<p><img alt="violinboxplot" src="../examples/img/tutorial/series_recipes_2.png" /></p>
 <p><a id='Additional-Addons-To-Try-1'></a></p>
 <h2 id="additional-addons-to-try">Additional Addons To Try</h2>
 <p>Given the easy extendability of Plots.jl, there are many other things you can try. Here's a short list of very usable addons to check out:</p>

@@ -847,21 +847,30 @@
 <p><a id='attributes-1'></a></p>
 <h1 id="attributes">Attributes</h1>
 <p>In Plots, input data is passed positionally (for example, the <code>y</code> in <code>plot(y)</code>), and attributes are passed as keywords (for example, <code>plot(y, color = :blue)</code>).</p>
-<div style="background-color: lightblue; padding: 10px; border-style: solid; border-width: medium; margin: 10px;">
-Tip: Most of the information on this page is available from your Julia session with the function `plotattr`, e.g. `plotattr(:Series)` to print a list of all series attributes, or `plotattr("ms")` to print the aliases and descriptions of `markersize`.
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 </div>
+<div class="codehilite"><pre><span></span><span class="n">Most</span> <span class="n">of</span> <span class="n">the</span> <span class="n">information</span> <span class="k">on</span> <span class="n">this</span> <span class="n">page</span> <span class="k">is</span> <span class="n">available</span> <span class="k">from</span> <span class="n">your</span> <span class="n">Julia</span> <span class="n">session</span> <span class="k">with</span> <span class="n">the</span> <span class="n">function</span> <span class="ss">`plotattr`</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="ss">`plotattr(:Series)`</span> <span class="k">to</span> <span class="n">print</span> <span class="n">a</span> <span class="n">list</span> <span class="n">of</span> <span class="k">all</span> <span class="n">series</span> <span class="n">attributes</span><span class="p">,</span> <span class="k">or</span> <span class="ss">`plotattr(&quot;ms&quot;)`</span> <span class="k">to</span> <span class="n">print</span> <span class="n">the</span> <span class="n">aliases</span> <span class="k">and</span> <span class="n">descriptions</span> <span class="n">of</span> <span class="ss">`markersize`</span><span class="p">.</span>
+</pre></div>
+
 
 <hr />
 <p><a id='aliases-1'></a></p>
 <h3 id="aliases">Aliases</h3>
 <p>Keywords can take a range of values through the <strong>alias mechanic</strong>.  For example, <code>plot(y, color = :blue)</code> is really interpreted as <code>plot(y, seriescolor = :blue)</code>.  Each attribute has a number of aliases (see the charts below), which are available to avoid the pain of constantly looking up plotting API documentation because you forgot the argument name.  <code>c</code>, <code>color</code>, and <code>seriescolor</code> all mean the same thing, and in fact those are eventually converted into the more precise attributes <code>linecolor</code>, <code>markercolor</code>, <code>markerstrokecolor</code>, and <code>fillcolor</code> (which you can then override if desired).</p>
-<div style="background-color: lightblue; padding: 10px; border-style: solid; border-width: medium; margin: 10px;">
-Tip: Use aliases for one-off analysis and visualization, but use the true keyword name for long-lived library code to avoid confusion.
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 </div>
+<div class="codehilite"><pre><span></span><span class="nv">Use</span> <span class="nv">aliases</span> <span class="k">for</span> <span class="nv">one</span><span class="o">-</span><span class="nv">off</span> <span class="nv">analysis</span> <span class="nv">and</span> <span class="nv">visualization</span>, <span class="nv">but</span> <span class="nv">use</span> <span class="nv">the</span> <span class="nv">true</span> <span class="nv">keyword</span> <span class="nv">name</span> <span class="k">for</span> <span class="nv">long</span><span class="o">-</span><span class="nv">lived</span> <span class="nv">library</span> <span class="nv">code</span> <span class="nv">to</span> <span class="nv">avoid</span> <span class="nv">confusion</span>.
+</pre></div>
 
-<div style="background-color: lightblue; padding: 10px; border-style: solid; border-width: medium; margin: 10px;">
-Tip: As of this writing, aliases do not work inside recipes!!
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 </div>
+<div class="codehilite"><pre><span></span><span class="nv">As</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">writing</span>, <span class="nv">aliases</span> <span class="k">do</span> <span class="nv">not</span> <span class="nv">work</span> <span class="nv">inside</span> <span class="nv">recipes</span><span class="o">!!</span>
+</pre></div>
+
 
 <hr />
 <p><a id='magic-arguments-1'></a></p>

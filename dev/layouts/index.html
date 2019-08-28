@@ -735,20 +735,20 @@
 </pre></div>
 
 
-<p><img alt="" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/layout/layout_1.png" /></p>
+<p><img alt="" src="../examples/img/layout/layout_1.png" /></p>
 <p>Pass a tuple to <code>layout</code> to create a grid of that size:</p>
 <div class="codehilite"><pre><span></span><span class="c"># create a 4x1 grid, and map each of the 4 series to one of the subplots</span>
 <span class="n">plot</span><span class="p">(</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">layout</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 
 
-<p><img alt="" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/layout/layout_2.png" /></p>
+<p><img alt="" src="../examples/img/layout/layout_2.png" /></p>
 <p>More complex grid layouts can be created with the <code>grid(...)</code> constructor:</p>
 <div class="codehilite"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">layout</span> <span class="o">=</span> <span class="n">grid</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">heights</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.1</span><span class="p">]))</span>
 </pre></div>
 
 
-<p><img alt="" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/layout/layout_3.png" /></p>
+<p><img alt="" src="../examples/img/layout/layout_3.png" /></p>
 <hr />
 <p><a id='Advanced-Layouts-1'></a></p>
 <h4 id="advanced-layouts">Advanced Layouts</h4>
@@ -763,7 +763,7 @@
 </pre></div>
 
 
-<p><img alt="" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/layout/layout_4.png" /></p>
+<p><img alt="" src="../examples/img/layout/layout_4.png" /></p>
 <hr />
 <p>Create inset (floating) subplots using the <code>inset_subplots</code> attribute. <code>inset_subplots</code> takes a list of (parent_layout, BoundingBox) tuples, where the bounding box is relative to the parent.</p>
 <p>Use <code>px</code>/<code>mm</code>/<code>inch</code> for absolute coords, <code>w</code>/<code>h</code> for percentage relative to the parent. Origin is top-left. <code>h_anchor</code>/<code>v_anchor</code> define what the <code>x</code>/<code>y</code> inputs of the bounding box refer to.</p>
@@ -784,7 +784,7 @@
 </pre></div>
 
 
-<p><img alt="" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/layout/layout_1.png" /></p>
+<p><img alt="" src="../examples/img/layout/layout_5.png" /></p>
 <p><a id='Adding-Subplots-incrementally-1'></a></p>
 <h3 id="adding-subplots-incrementally">Adding Subplots incrementally</h3>
 <p>You can also combine multiple plots to a single plot. To do this, simply pass the variables holding the previous plots to the <code>plot</code> function:</p>

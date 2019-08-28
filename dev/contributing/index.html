@@ -1338,18 +1338,18 @@
 </pre></div>
 
 
-<p><img alt="" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/contributing/my_count_1.png" /></p>
+<p><img alt="" src="../examples/img/contributing/my_count_1.png" /></p>
 <div class="codehilite"><pre><span></span><span class="n">mycount</span><span class="p">(</span><span class="n">rand</span><span class="p">([</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="s">&quot;C&quot;</span><span class="p">],</span><span class="mi">100</span><span class="p">))</span>
 </pre></div>
 
 
-<p><img alt="" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/contributing/my_count_2.png" /></p>
+<p><img alt="" src="../examples/img/contributing/my_count_2.png" /></p>
 <p>But you didn't consider the person that, in the future, might want to pass integers to this recipe:</p>
 <div class="codehilite"><pre><span></span><span class="n">mycount</span><span class="p">(</span><span class="n">rand</span><span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">))</span>
 </pre></div>
 
 
-<p><img alt="" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/contributing/my_count_3.png" /></p>
+<p><img alt="" src="../examples/img/contributing/my_count_3.png" /></p>
 <p>This user expected integers to be treated as numbers and output a histogram, but instead they were treated like strings.  A simple solution would have been to replace <code>if T.parameters[1] == Float64</code> with <code>if T.parameters[1] &lt;: Number</code>.  However, should we even depend on <code>T</code> having it's first parameter be the element type? (No)  So even better would be <code>if eltype(arr) &lt;: Number</code>, which now allows any container with any numeric type to trigger the "histogram" logic.</p>
 <p>This simple example outlines a common theme when developing Plots (or really any other Julia package).  Try to create the most generic implementation you can think of while maintaining correctness.  You don't know what crazy types someone else will use to try to access your functionality.</p>
 <hr />

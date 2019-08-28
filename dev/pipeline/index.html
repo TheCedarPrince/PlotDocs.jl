@@ -791,7 +791,7 @@
 </pre></div>
 
 
-<p><img alt="pipeline_img" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/pipeline/pipeline_1.png" /></p>
+<p><img alt="pipeline_img" src="../examples/img/pipeline/pipeline_1.png" /></p>
 <p>In this example, we have an input matrix, and we'd like to plot three series on top of each other, one for each column of data. We create a row vector (1x3 matrix) of symbols to assign different visualization types for each series, set the orientation of the histogram, and set alpha values.</p>
 <p>For comparison's sake, this is somewhat similar to the following calls in PyPlot:</p>
 <div class="codehilite"><pre><span></span><span class="k">import</span> <span class="n">PyPlot</span>
@@ -844,7 +844,7 @@
 </pre></div>
 
 
-<p><img alt="pipeline_img" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/pipeline/pipeline_2.png" /></p>
+<p><img alt="pipeline_img" src="../examples/img/pipeline/pipeline_2.png" /></p>
 <p>Note that if dispatch does not find a recipe for the full combination of inputs, it will then try to apply <a href="../recipes/#type-recipes-1">type recipes</a> to each individual argument.</p>
 <p>This hook gave us a nice way to swap out the input data and add custom visualization attributes for a user type.  Things like error bars, regression lines, ribbons, and group filtering are also handled during this recursive pass.</p>
 <p>Groups: When you'd like to split a data series into multiple plot series, you can use the <code>group</code> keyword.  Attributes can be applied to the resulting series as if your data had been already separated into distinct input data.  The <code>group</code> variable determines how to split the data and also assigns the legend label.</p>
@@ -853,7 +853,7 @@
 </pre></div>
 
 
-<p><img alt="pipeline_img" src="https://raw.githubusercontent.com/JuliaPlots/PlotReferenceImages.jl/master/PlotDocs/pipeline/pipeline_3.png" /></p>
+<p><img alt="pipeline_img" src="../examples/img/pipeline/pipeline_3.png" /></p>
 <hr />
 <p><a id='Step-3:-Initialize-and-update-Plot-and-Subplots-1'></a></p>
 <h3 id="step-3-initialize-and-update-plot-and-subplots">Step 3:  Initialize and update Plot and Subplots</h3>
@@ -871,10 +871,10 @@
 <p><a id='Step-6:-Display-it-1'></a></p>
 <h3 id="step-6-display-it">Step 6: Display it</h3>
 <p>Open/refresh a GUI window, write to a file, or display inline in IJulia.  Remember that, in IJulia or the REPL, <strong>a Plot is only displayed when returned</strong> (a semicolon will suppress the return), or if explicitly displayed with <code>display()</code>, <code>gui()</code>, or by adding <code>show = true</code> to your plot command.</p>
-<div style="background-color: lightblue; padding: 10px; border-style: solid; border-width: medium; margin: 10px;">
-Tip: You can have MATLAB-like interactive behavior by setting the default value: default(show = true)
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can have MATLAB-like interactive behavior by setting the default value: default(show = true)</p>
 </div>
-
 <hr />
                 
                   
