@@ -719,13 +719,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3d" title="3D" class="md-nav__link">
-    3D
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#groups-and-subplots" title="Groups and Subplots" class="md-nav__link">
     Groups and Subplots
   </a>
@@ -999,13 +992,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3d" title="3D" class="md-nav__link">
-    3D
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#groups-and-subplots" title="Groups and Subplots" class="md-nav__link">
     Groups and Subplots
   </a>
@@ -1274,9 +1260,9 @@
 <h3 id="annotations">Annotations</h3>
 <p>The <code>annotations</code> keyword is used for text annotations in data-coordinates.  Pass in a tuple (x,y,text) or a vector of annotations.  <code>annotate!(ann)</code> is shorthand for <code>plot!(; annotation=ann)</code>.  Series annotations are used for annotating individual data points. They require only the annotation... x/y values are computed.  A <code>PlotText</code> object can be build with the method <code>text(string, attr...)</code>, which wraps font and color attributes.</p>
 <div class="codehilite"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">annotations</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">y</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">text</span><span class="p">(</span><span class="s">&quot;this is #3&quot;</span><span class="p">,</span> <span class="o">:</span><span class="n">left</span><span class="p">)),</span> <span class="n">leg</span><span class="o">=</span><span class="kc">false</span><span class="p">)</span>
-<span class="n">annotate!</span><span class="p">([(</span><span class="mi">5</span><span class="p">,</span> <span class="n">y</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">text</span><span class="p">(</span><span class="s">&quot;this is #5&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="o">:</span><span class="n">red</span><span class="p">,</span> <span class="o">:</span><span class="n">center</span><span class="p">)),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">y</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">text</span><span class="p">(</span><span class="s">&quot;this is #10&quot;</span><span class="p">,</span> <span class="o">:</span><span class="n">right</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s">&quot;courier&quot;</span><span class="p">))])</span>
-<span class="n">scatter!</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">6</span><span class="p">),</span> <span class="n">rand</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="o">:</span><span class="n">orange</span><span class="p">),</span> <span class="n">series_annotations</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;series&quot;</span><span class="p">,</span> <span class="s">&quot;annotations&quot;</span><span class="p">,</span> <span class="s">&quot;map&quot;</span><span class="p">,</span> <span class="s">&quot;to&quot;</span><span class="p">,</span> <span class="s">&quot;series&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">(</span><span class="s">&quot;data&quot;</span><span class="p">,</span> <span class="o">:</span><span class="n">green</span><span class="p">)])</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">annotations</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">y</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">Plots</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s">&quot;this is #3&quot;</span><span class="p">,</span> <span class="o">:</span><span class="n">left</span><span class="p">)),</span> <span class="n">leg</span><span class="o">=</span><span class="kc">false</span><span class="p">)</span>
+<span class="n">annotate!</span><span class="p">([(</span><span class="mi">5</span><span class="p">,</span> <span class="n">y</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">Plots</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s">&quot;this is #5&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="o">:</span><span class="n">red</span><span class="p">,</span> <span class="o">:</span><span class="n">center</span><span class="p">)),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">y</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">Plots</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s">&quot;this is #10&quot;</span><span class="p">,</span> <span class="o">:</span><span class="n">right</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s">&quot;courier&quot;</span><span class="p">))])</span>
+<span class="n">scatter!</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">6</span><span class="p">),</span> <span class="n">rand</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="o">:</span><span class="n">orange</span><span class="p">),</span> <span class="n">series_annotations</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;series&quot;</span><span class="p">,</span> <span class="s">&quot;annotations&quot;</span><span class="p">,</span> <span class="s">&quot;map&quot;</span><span class="p">,</span> <span class="s">&quot;to&quot;</span><span class="p">,</span> <span class="s">&quot;series&quot;</span><span class="p">,</span> <span class="n">Plots</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s">&quot;data&quot;</span><span class="p">,</span> <span class="o">:</span><span class="n">green</span><span class="p">)])</span>
 </pre></div>
 
 
@@ -1308,19 +1294,6 @@
 
 
 <p><img alt="" src="../img/plotlyjs/ref23.png" /></p>
-<p><a id='plotlyjs-ref24-1'></a></p>
-<h3 id="3d">3D</h3>
-<div class="codehilite"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">ts</span> <span class="o">=</span> <span class="n">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">8</span><span class="nb">π</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">ts</span> <span class="o">.*</span> <span class="n">map</span><span class="p">(</span><span class="n">cos</span><span class="p">,</span> <span class="n">ts</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.1</span><span class="n">ts</span><span class="p">)</span> <span class="o">.*</span> <span class="n">map</span><span class="p">(</span><span class="n">sin</span><span class="p">,</span> <span class="n">ts</span><span class="p">)</span>
-<span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="n">n</span>
-<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">zcolor</span><span class="o">=</span><span class="n">reverse</span><span class="p">(</span><span class="n">z</span><span class="p">),</span> <span class="n">m</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="o">:</span><span class="n">blues</span><span class="p">,</span> <span class="n">Plots</span><span class="o">.</span><span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">)),</span> <span class="n">leg</span><span class="o">=</span><span class="kc">false</span><span class="p">,</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">plot!</span><span class="p">(</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="mi">1</span><span class="o">:</span><span class="n">n</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-
-
-<p><img alt="" src="../img/plotlyjs/ref24.png" /></p>
 <p><a id='plotlyjs-ref26-1'></a></p>
 <h3 id="groups-and-subplots">Groups and Subplots</h3>
 <div class="codehilite"><pre><span></span><span class="n">group</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="n">map</span><span class="p">((</span><span class="n">i</span><span class="o">-&gt;</span><span class="k">begin</span>
@@ -1428,7 +1401,7 @@
 <li>Supported values for linestyle: <code>:auto</code>, <code>:dash</code>, <code>:dashdot</code>, <code>:dot</code>, <code>:solid</code></li>
 <li>Supported values for marker: <code>:auto</code>, <code>:circle</code>, <code>:cross</code>, <code>:diamond</code>, <code>:dtriangle</code>, <code>:hexagon</code>, <code>:hline</code>, <code>:none</code>, <code>:octagon</code>, <code>:pentagon</code>, <code>:rect</code>, <code>:utriangle</code>, <code>:vline</code>, <code>:xcross</code></li>
 </ul>
-<p>(Automatically generated: 2019-09-08T09:27:01.752)</p>
+<p>(Automatically generated: 2019-10-23T11:22:18.342)</p>
                 
                   
                 
