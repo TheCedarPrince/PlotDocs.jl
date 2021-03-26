@@ -70,6 +70,7 @@ function generate_markdown(pkgname::Symbol; skip = get(Plots._backend_skips, pkg
         # write(md, "```julia\n$(join(map(string, example.exprs), "\n"))\n```\n\n")
         write(md, """
         ```@example $pkgname
+        Plots.reset_defaults() # hide
         """)
         for expr in example.exprs
             pretty_print_expr(md, expr)
@@ -210,7 +211,12 @@ const ATTRIBUTE_TEXTS = Dict(
     :Series => "These attributes apply to individual series (lines, scatters, heatmaps, etc)",
     :Plot => "These attributes apply to the full Plot. (A Plot contains a tree-like layout of Subplots)",
     :Subplot => "These attributes apply to settings for individual Subplots.",
-    :Axis => "These attributes apply to an individual Axis in a Subplot (for example the `subplot[:xaxis]`)",
+    :Axis => """
+    These attributes apply by default to all Axes in a Subplot (for example the `subplot[:xaxis]`).
+    !!! info
+        You can also specific the x, y, or z axis for each of these attributes by prefixing the attribute name with x, y, or z
+        (for example `xmirror` only sets the mirror attribute for the x axis).
+    """,
 )
 
 const ATTRIBUTE_DEFAULTS = Dict(

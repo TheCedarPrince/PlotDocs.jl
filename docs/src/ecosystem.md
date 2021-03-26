@@ -67,7 +67,32 @@ groupedbar(rand(10, 3), bar_position = :stack, bar_width = 0.7) # hide
 
 ## [GraphRecipes](https://github.com/JuliaPlots/GraphRecipes.jl)
 
----
+GraphRecipes is a collection of recipes for visualizing graphs. Users specify a graph through an adjacency matrix, an adjacency list, or an AbstractGraph via LightGraphs.
+
+```julia
+julia> using GraphRecipes, Plots
+julia> using LightGraphs
+
+julia> g = wheel_graph(10)
+julia> graphplot(g, curves=false)
+```
+
+![WheelGraph](https://user-images.githubusercontent.com/8610352/74631053-de196b80-51c0-11ea-8cba-ddbdc2c6312f.png)
+
+Example of using GraphRecipes to plot a directed graph given an asymmetric adjacency matrix:
+```julia
+using GraphRecipes, Plots
+g = [0 1 1;
+     0 0 1;
+     0 1 0]
+
+graphplot(g, names=1:3, curvature_scalar=0.1)
+```
+
+![](https://user-images.githubusercontent.com/8610352/74631107-04d7a200-51c1-11ea-87c1-be9cbf1b02eb.png)
+
+More examples of using GraphRecipes are here:
+http://docs.juliaplots.org/latest/graphrecipes/examples/
 
 # Community packages
 
@@ -167,30 +192,22 @@ Common plotting recipes for statistics and machine learning.
 
 LazySets.jl is a Julia package for calculus with convex sets. The principle behind LazySets is to wrap set computations into specialized types, delaying the evaluation of the result of an expression until it is necessary. Combining lazy operations in high dimensions and explicit computations in low dimensions, the library can be applied to solve complex, high-dimensional problems.
 
-Reachability plot of a [two-mode hybrid system](https://juliareach.github.io/LazySets.jl/latest/man/reach_zonotopes_hybrid.html#Example-1):
+Reachability plot of a [two-mode hybrid system](https://juliareach.github.io/LazySets.jl/dev/man/reach_zonotopes_hybrid/#Example):
 
-<img src="https://raw.githubusercontent.com/JuliaReach/JuliaReach-website/master/src/images/hybrid2d.png" height="330">
+![](https://raw.githubusercontent.com/JuliaReach/JuliaReach-website/master/src/images/hybrid2d.png)
 
 ---
 
-TODO:
+And many more:
 
-## Losses
-
-## IterativeSolvers
-
-## SymPy
-
-## OnlineStats
-
-## Robotlib
-
-## JWAS
-
-## QuantEcon
-
-## Reinforce
-
-## Optim
-
-## Transformations / Flow
+- Losses.jl
+- IterativeSolvers.jl
+- SymPy.jl
+- OnlineStats.jl
+- Robotlib.jl
+- JWAS.jl
+- QuantEcon.jl
+- Reinforce.jl
+- Optim.jl
+- Transformations.jl / Flow.jl
+- ...
